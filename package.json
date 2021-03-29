@@ -1,5 +1,5 @@
 {
-  "name": "assessment-hrplatform-is",
+  "name": "@assessment-hrplatform/is",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -45,8 +45,5 @@
     "hooks": {
       "pre-commit": "npm run lint-staged"
     }
-  },
-  "publishConfig": {
-    "registry": "http://sbtatlas.sigma.sbrf.ru/nexus/content/repositories/npm-corp/"
   }
 }
