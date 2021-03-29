@@ -1,0 +1,52 @@
+{
+  "name": "assessment-hrplatform-is",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "start": "run-s watch",
+    "build": "npm run clean && tsc",
+    "watch": "tsc -w",
+    "lint": "eslint --ext=ts,tsx,js,jsx src",
+    "lint:fix": "eslint --ext=ts,tsx,js,jsx --fix src",
+    "lint-staged": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/assessment-hrplatform/is.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/assessment-hrplatform/is/issues"
+  },
+  "homepage": "https://github.com/assessment-hrplatform/is#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-typescript": "^7.9.0",
+    "@typescript-eslint/eslint-plugin": "~2.17.0",
+    "@typescript-eslint/eslint-plugin-tslint": "~2.17.0",
+    "@typescript-eslint/experimental-utils": "~2.17.0",
+    "@typescript-eslint/parser": "~2.17.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.6.0",
+    "eslint-plugin-functional": "^1.0.0",
+    "eslint-plugin-import": "2.20.0",
+    "eslint-plugin-jsdoc": "^18.0.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "lint-staged": "^9.2.5",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1",
+    "tslint": "^5.19.0",
+    "typescript": "~3.7.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
+  },
+  "publishConfig": {
+    "registry": "http://sbtatlas.sigma.sbrf.ru/nexus/content/repositories/npm-corp/"
+  }
+}
