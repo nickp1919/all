@@ -6,8 +6,10 @@ import configureMockStore, {
 export class MockStoreCreator<T> {
   private mockStore: TMockStoreCreator<T, {}>;
   private localStore: MockStoreEnhanced<T, {}>;
+  private reducer: (state: T, action: any) => T;
+  private initialState: T;
 
-  constructor(private reducer: (state: T, action: any) => T, private initialState: T) {
+  constructor(reducer: (state: T, action: any) => T, initialState: T) {
     this.mockStore = configureMockStore<T>();
 
     this.initialState = initialState;

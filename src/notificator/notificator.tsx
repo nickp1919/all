@@ -27,7 +27,7 @@ class Notificator {
       <NotificatorWrapperDiv>
         {icon}
 
-        <NotificatorText variant={'body1Regular'}>{message}</NotificatorText>
+        <NotificatorText>{message}</NotificatorText>
       </NotificatorWrapperDiv>
     );
 

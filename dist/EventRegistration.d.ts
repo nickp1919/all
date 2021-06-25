@@ -1,9 +1,10 @@
+/// <reference types="node" />
 declare class EventRegistration {
     constructor(delay?: number);
     eventList: {
         [key: string]: Map<symbol, Function>;
     };
-    idTimeout?: number | null;
+    idTimeout?: NodeJS.Timeout;
     delay: number;
     execute: (event: Event) => void;
     createCategory: (eventName: string) => void;

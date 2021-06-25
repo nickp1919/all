@@ -1,17 +1,19 @@
 import configureMockStore from 'redux-mock-store';
 export class MockStoreCreator {
+    mockStore;
+    localStore;
+    reducer;
+    initialState;
     constructor(reducer, initialState) {
-        this.reducer = reducer;
-        this.initialState = initialState;
-        this.handler = (actions) => actions.reduce((state, action) => this.reducer(state, action), this.initialState);
-        this.getState = () => this.localStore.getState();
-        this.dispatch = (action) => this.localStore.dispatch(action);
-        this.resetStore = () => {
-            this.localStore = this.mockStore(this.handler);
-        };
         this.mockStore = configureMockStore();
         this.initialState = initialState;
         this.reducer = reducer;
         this.localStore = this.mockStore(this.handler);
     }
+    handler = (actions) => actions.reduce((state, action) => this.reducer(state, action), this.initialState);
+    getState = () => this.localStore.getState();
+    dispatch = (action) => this.localStore.dispatch(action);
+    resetStore = () => {
+        this.localStore = this.mockStore(this.handler);
+    };
 }

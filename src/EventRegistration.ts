@@ -4,7 +4,7 @@
 class EventRegistration {
   constructor(delay?: number) {
     this.eventList = {};
-    this.idTimeout = null;
+    this.idTimeout = undefined;
     this.delay = delay || 1000;
   }
 
@@ -12,7 +12,7 @@ class EventRegistration {
     [key: string]: Map<symbol, Function>;
   };
 
-  idTimeout?: number | null;
+  idTimeout?: NodeJS.Timeout;
 
   delay: number;
 

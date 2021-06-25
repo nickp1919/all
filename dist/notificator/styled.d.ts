@@ -1,5 +1,5 @@
-export declare const NotificatorWrapperDiv: any;
-export declare const ErrorIconDiv: any;
-export declare const InfoIconDiv: any;
-export declare const SuccessIconDiv: any;
-export declare const NotificatorText: any;
+export declare const NotificatorWrapperDiv: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const ErrorIconDiv: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const InfoIconDiv: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const SuccessIconDiv: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const NotificatorText: import("styled-components").StyledComponent<"div", any, {}, never>;

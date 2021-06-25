@@ -1,4 +1,4 @@
-import { isNull, isUndefined } from '../';
+import { isNull, isUndefined } from './';
 
 export const chNull = <T>(field: T, extra?: string | number) => {
   if (!isUndefined(extra)) {

@@ -1,5 +1,5 @@
 const isFunction = <T extends Function>(obj: T) => {
-  return !!(obj && obj.constructor && obj.call && obj.apply);
+  return !!(obj && obj.constructor && obj?.call && obj?.apply);
 };
 
 export default isFunction;

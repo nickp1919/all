@@ -1,5 +1,5 @@
 declare const sorting: ({ array, variant, properties, type, SORTING, }: {
-    array: any[];
+    array: Array<any>;
     variant?: string | undefined;
     properties?: string | undefined;
     type?: string | undefined;

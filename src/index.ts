@@ -40,6 +40,7 @@ import getBgColorTag from './getBgColorTag';
 import arrayMaxField from './arrayMaxField';
 import chunk from './chunk';
 import omit from './omit';
+import { MockStoreCreator } from "./testUtils";
 
 export {
 	Notificator,
@@ -82,5 +83,6 @@ export {
 	windowCheck,
 	actionsCombiner,
 	getRandomString,
-	omit
+	omit,
+	MockStoreCreator
 }
