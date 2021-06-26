@@ -41,6 +41,7 @@ import arrayMaxField from './arrayMaxField';
 import chunk from './chunk';
 import omit from './omit';
 import { MockStoreCreator } from "./testUtils";
+import reverseBind from "./reverseBind";
 
 export {
 	Notificator,
@@ -84,5 +85,6 @@ export {
 	actionsCombiner,
 	getRandomString,
 	omit,
-	MockStoreCreator
+	MockStoreCreator,
+	reverseBind
 }

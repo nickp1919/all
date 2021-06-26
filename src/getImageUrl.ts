@@ -1,5 +1,5 @@
 // на платформе используется undefined для отрисовки заглушки
-const getImageUrl = (imageUrl: string | undefined, API: any) => {
+const getImageUrl = (API: any, imageUrl: string | undefined) => {
   return imageUrl ? `${API.img}${imageUrl}` : undefined;
 };
 
