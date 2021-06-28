@@ -1,7 +1,8 @@
 {
   "name": "@assessment-hrplatform/utils",
   "version": "1.0.1",
-  "description": "",
+  "private": false,
+  "description": "Сборник полезных утилит",
   "files": [
     "dist/"
   ],
@@ -16,10 +17,7 @@
     "lint-staged": "lint-staged",
     "start": "run-s watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/assessment-hrplatform/utils.git"
-  },
+  "repository": "https://github.com/assessment-hrplatform/utils",
   "author": "ridrifews",
   "license": "ISC",
   "bugs": {
