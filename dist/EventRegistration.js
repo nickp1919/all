@@ -1,14 +1,14 @@
 // Утилита для консолидации множественных обработчиков по глобальным событиям window
 // и выполнения их только после того как событие завершилось.
 class EventRegistration {
+    eventList;
+    idTimeout;
+    delay;
     constructor(delay) {
         this.eventList = {};
         this.idTimeout = undefined;
         this.delay = delay || 1000;
     }
-    eventList;
-    idTimeout;
-    delay;
     execute = (event) => {
         this.idTimeout && clearTimeout(this.idTimeout);
         this.idTimeout = setTimeout(() => {

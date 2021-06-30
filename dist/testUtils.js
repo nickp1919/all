@@ -10,10 +10,16 @@ export class MockStoreCreator {
         this.reducer = reducer;
         this.localStore = this.mockStore(this.handler);
     }
-    handler = (actions) => actions.reduce((state, action) => this.reducer(state, action), this.initialState);
-    getState = () => this.localStore.getState();
-    dispatch = (action) => this.localStore.dispatch(action);
-    resetStore = () => {
+    handler(actions) {
+        return actions.reduce((state, action) => this.reducer(state, action), this.initialState);
+    }
+    getState() {
+        return this.localStore.getState();
+    }
+    dispatch(action) {
+        return this.localStore.dispatch(action);
+    }
+    resetStore() {
         this.localStore = this.mockStore(this.handler);
-    };
+    }
 }

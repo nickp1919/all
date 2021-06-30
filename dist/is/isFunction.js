@@ -1,4 +1,2 @@
-const isFunction = (obj) => {
-    return !!(obj && obj.constructor && obj?.call && obj?.apply);
-};
+const isFunction = (obj) => !!(obj && obj.constructor && obj.apply);
 export default isFunction;

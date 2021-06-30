@@ -4,10 +4,10 @@ import configureMockStore, {
 } from 'redux-mock-store';
 
 export class MockStoreCreator<T> {
-  private mockStore: TMockStoreCreator<T, {}>;
+  private readonly mockStore: TMockStoreCreator<T, {}>;
   private localStore: MockStoreEnhanced<T, {}>;
-  private reducer: (state: T, action: any) => T;
-  private initialState: T;
+  private readonly reducer: (state: T, action: any) => T;
+  private readonly initialState: T;
 
   constructor(reducer: (state: T, action: any) => T, initialState: T) {
     this.mockStore = configureMockStore<T>();
@@ -17,14 +17,19 @@ export class MockStoreCreator<T> {
     this.localStore = this.mockStore(this.handler);
   }
 
-  private readonly handler = (actions: any[]) =>
-    actions.reduce((state, action) => this.reducer(state, action), this.initialState);
+  private handler(actions: any[]) {
+    return actions.reduce((state, action) => this.reducer(state, action), this.initialState);
+  }
 
-  getState = () => this.localStore.getState();
+  getState() {
+    return this.localStore.getState();
+  }
 
-  dispatch = (action: any) => this.localStore.dispatch(action);
+  dispatch(action: any) {
+    return this.localStore.dispatch(action);
+  }
 
-  resetStore = () => {
+  resetStore() {
     this.localStore = this.mockStore(this.handler);
-  };
+  }
 }

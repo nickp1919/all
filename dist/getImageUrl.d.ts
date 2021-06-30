@@ -1,2 +1,2 @@
-declare const getImageUrl: (imageUrl: string | undefined, API: any) => string | undefined;
+declare const getImageUrl: (API: any, imageUrl: string | undefined) => string | undefined;
 export default getImageUrl;

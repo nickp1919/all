@@ -2,19 +2,17 @@
 // и выполнения их только после того как событие завершилось.
 
 class EventRegistration {
+  eventList: {
+    [key: string]: Map<symbol, Function>;
+  };
+  idTimeout?: NodeJS.Timeout;
+  delay: number;
+
   constructor(delay?: number) {
     this.eventList = {};
     this.idTimeout = undefined;
     this.delay = delay || 1000;
   }
-
-  eventList: {
-    [key: string]: Map<symbol, Function>;
-  };
-
-  idTimeout?: NodeJS.Timeout;
-
-  delay: number;
 
   execute = (event: Event) => {
     this.idTimeout && clearTimeout(this.idTimeout);

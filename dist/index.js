@@ -9,7 +9,6 @@ import isObject from './is/isObject';
 import isSetField from './is/isSetField';
 import isFunction from './is/isFunction';
 import isSomeTrueField from './is/isSomeTrueField';
-import { Notificator } from './notificator';
 import dispatcher from './dispatcher';
 import navigator from './navigator';
 import uploadFile from './uploadFile';
@@ -17,7 +16,6 @@ import chNull from './chNull';
 import declOfNum from './declOfNum';
 import secondsToHours from './secondsToHours';
 import timeHoursFormat from './timeHoursFormat';
-import EventRegistration from './EventRegistration';
 import { cloneArray, deepCloneObject, cloneObject } from './CloneObject';
 import useClickOutside from './useClickOutside';
 import { hexToRgba, getColorFromTheme } from './colors';
@@ -39,5 +37,12 @@ import getBgColorTag from './getBgColorTag';
 import arrayMaxField from './arrayMaxField';
 import chunk from './chunk';
 import omit from './omit';
-import { MockStoreCreator } from "./testUtils";
-export { Notificator, isArray, isArrayCount, isFunction, isSetField, isUndefined, isObject, isNull, isString, isNumber, isBoolean, isSomeTrueField, dispatcher, navigator, uploadFile, chNull, declOfNum, secondsToHours, timeHoursFormat, EventRegistration, cloneArray, deepCloneObject, cloneObject, useClickOutside, hexToRgba, getColorFromTheme, downloadByUrl, getShortName, getTestType, getImageUrl, checkTestIdConsistency, debounceFn, sorting, initials, chunk, arrayMaxField, getBgColorTag, getThemeForSquad, getDateFormatText, getInitialsUser, windowCheck, actionsCombiner, getRandomString, omit, MockStoreCreator };
+import reverseBind from "./reverseBind";
+//import { MockStoreCreator } from "./testUtils";
+//import EventRegistration from './EventRegistration';
+//import { Notificator } from './notificator';
+export { isArray, isArrayCount, isFunction, isSetField, isUndefined, isObject, isNull, isString, isNumber, isBoolean, isSomeTrueField, dispatcher, navigator, uploadFile, chNull, declOfNum, secondsToHours, timeHoursFormat, cloneArray, deepCloneObject, cloneObject, useClickOutside, hexToRgba, getColorFromTheme, downloadByUrl, getShortName, getTestType, getImageUrl, checkTestIdConsistency, debounceFn, sorting, initials, chunk, arrayMaxField, getBgColorTag, getThemeForSquad, getDateFormatText, getInitialsUser, windowCheck, actionsCombiner, getRandomString, omit, reverseBind
+//MockStoreCreator,
+//EventRegistration,
+//Notificator,
+ };
