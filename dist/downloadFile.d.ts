@@ -1,6 +1,6 @@
-declare function downloadByUrl({ name, link, API }: {
-    name: string;
-    link: string;
-    API: any;
+export default function downloadFile({ fetchUrl, setDisabled, fileName, type, }: {
+    fetchUrl: string;
+    setDisabled?: Function;
+    fileName: string;
+    type: string;
 }): void;
-export default downloadByUrl;

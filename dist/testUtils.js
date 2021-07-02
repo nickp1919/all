@@ -1,9 +1,5 @@
 import configureMockStore from 'redux-mock-store';
 export class MockStoreCreator {
-    mockStore;
-    localStore;
-    reducer;
-    initialState;
     constructor(reducer, initialState) {
         this.mockStore = configureMockStore();
         this.initialState = initialState;

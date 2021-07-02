@@ -19,7 +19,7 @@ import timeHoursFormat from './timeHoursFormat';
 import { cloneArray, deepCloneObject, cloneObject } from './CloneObject';
 import useClickOutside from './useClickOutside';
 import { hexToRgba, getColorFromTheme } from './colors';
-import downloadByUrl from './downloadFile';
+import downloadByUrl from './downloadByUrl';
 import getShortName from './getShortName';
 import getTestType from './getTestType';
 import getImageUrl from './getImageUrl';
@@ -37,12 +37,15 @@ import getBgColorTag from './getBgColorTag';
 import arrayMaxField from './arrayMaxField';
 import chunk from './chunk';
 import omit from './omit';
-import reverseBind from "./reverseBind";
-//import { MockStoreCreator } from "./testUtils";
-//import EventRegistration from './EventRegistration';
-//import { Notificator } from './notificator';
-export { isArray, isArrayCount, isFunction, isSetField, isUndefined, isObject, isNull, isString, isNumber, isBoolean, isSomeTrueField, dispatcher, navigator, uploadFile, chNull, declOfNum, secondsToHours, timeHoursFormat, cloneArray, deepCloneObject, cloneObject, useClickOutside, hexToRgba, getColorFromTheme, downloadByUrl, getShortName, getTestType, getImageUrl, checkTestIdConsistency, debounceFn, sorting, initials, chunk, arrayMaxField, getBgColorTag, getThemeForSquad, getDateFormatText, getInitialsUser, windowCheck, actionsCombiner, getRandomString, omit, reverseBind
-//MockStoreCreator,
-//EventRegistration,
-//Notificator,
- };
+import reverseBind from './reverseBind';
+import { MockStoreCreator } from './testUtils';
+import EventRegistration from './EventRegistration';
+import { Notificator } from './notificator';
+import CSImageLoad from './CSImageLoad';
+import downloadFile from './downloadFile';
+import fileToBase64 from './fileToBase64';
+import getRandomIntInclusive from './getRandomIntInclusive';
+import moveElementArray from './moveElementArray';
+import onlyNumber from './onlyNumber';
+import secondsToMinutes from './seconds-to-minutes';
+export { isArray, isArrayCount, isFunction, isSetField, isUndefined, isObject, isNull, isString, isNumber, isBoolean, isSomeTrueField, dispatcher, navigator, uploadFile, chNull, declOfNum, secondsToHours, timeHoursFormat, cloneArray, deepCloneObject, cloneObject, useClickOutside, hexToRgba, getColorFromTheme, downloadByUrl, getShortName, getTestType, getImageUrl, checkTestIdConsistency, debounceFn, sorting, initials, chunk, arrayMaxField, getBgColorTag, getThemeForSquad, getDateFormatText, getInitialsUser, windowCheck, actionsCombiner, getRandomString, omit, reverseBind, MockStoreCreator, EventRegistration, Notificator, CSImageLoad, downloadFile, fileToBase64, getRandomIntInclusive, moveElementArray, onlyNumber, secondsToMinutes };
