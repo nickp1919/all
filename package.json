@@ -1,6 +1,6 @@
 {
   "name": "@assessment-hrplatform/utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "description": "Сборник полезных утилит",
   "files": [
