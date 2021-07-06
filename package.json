@@ -1,13 +1,11 @@
 {
-  "name": "@assessment-hrplatform/utils",
-  "version": "1.0.4",
+  "name": "@assessment-hrplatform/all",
+  "version": "1.0.0",
   "private": false,
   "description": "Сборник полезных утилит",
   "files": [
     "dist/"
   ],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rimraf dist",
     "build:tsc": "tsc",
