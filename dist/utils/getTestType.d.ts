@@ -1,6 +1,6 @@
-declare type OptionType = {
+export declare type OptionType = {
     test?: string;
     survey?: string;
 };
-declare const getTestType: (TEST: any, status: string, option?: OptionType | undefined) => any;
+declare const getTestType: (status: string, option?: OptionType | undefined) => string;
 export default getTestType;

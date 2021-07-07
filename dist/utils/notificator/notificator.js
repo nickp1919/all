@@ -5,7 +5,7 @@ import { ReactComponent as InfoCircleSvg } from './icons/info-circle.svg';
 import { ReactComponent as CloseCircleSvg } from './icons/close-circle.svg';
 import { NotificatorWrapperDiv, ErrorIconDiv, InfoIconDiv, SuccessIconDiv, NotificatorText, } from './styled';
 let notification = null;
-Notification.newInstance({ prefixCls: 'assessment-admin_rc-notification', style: { top: 30, right: 30 } }, (n) => (notification = n));
+Notification.newInstance({ prefixCls: 'assessment-rc-notification', style: { top: 30, right: 30 } }, (n) => (notification = n));
 class Notificator {
 }
 Notificator.notify = (message, type, options = {}) => {

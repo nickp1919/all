@@ -116,9 +116,9 @@ export const TEST = {
             url: 'info',
         },
         /*{
-            name: 'содержание',
-            url: 'subjects',
-        },*/
+                name: 'содержание',
+                url: 'subjects',
+            },*/
         {
             name: 'назначение',
             url: 'assignments',
@@ -128,13 +128,13 @@ export const TEST = {
             url: 'reports',
         },
         /*{
-            name: 'проверка',
-            url: 'verification',
-        },*/
+                name: 'проверка',
+                url: 'verification',
+            },*/
         /*{
-            name: 'результаты',
-            url: 'results',
-        },*/
+                name: 'результаты',
+                url: 'results',
+            },*/
     ],
     BUTTONS_360: [
         {
@@ -297,4 +297,16 @@ export const RESOLUTION = {
 };
 export const INDENTS = {
     default: '2%',
+};
+export const FontType = {
+    default: {
+        fontFamily: 'Helvetica, Arial, sans-serif;',
+        variant: 'body2Regular',
+        color: 'inherit',
+        as: 'div',
+        fontWeight: 'font-weight: 400;',
+    },
+    bold: {
+        fontWeight: 'font-weight: bold;',
+    },
 };

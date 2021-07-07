@@ -36,9 +36,9 @@ export const SuccessIconDiv = styled.div`
 export const NotificatorText = styled.div`
   ${css({ m: 0 })}
   color: #000000;
-  fontFamily: 'SB Sans Text', Helvetica, Arial, sans-serif;
-  fontWeight: 400;
-  fontSize: 16px;
-  lineHeight: 20px;
-  letterSpacing: -0.288px;
+  fontfamily: 'SB Sans Text', Helvetica, Arial, sans-serif;
+  fontweight: 400;
+  fontsize: 16px;
+  lineheight: 20px;
+  letterspacing: -0.288px;
 `;

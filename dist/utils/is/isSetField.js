@@ -1,4 +1,4 @@
-import { isUndefined, isNull } from '../index';
+import { isUndefined, isNull } from "..";
 const isSetField = (val) => {
     if (isUndefined(val)) {
         return false;

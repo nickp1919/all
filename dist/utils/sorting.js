@@ -1,5 +1,6 @@
-import { isArrayCount, isObject, isSetField } from './index';
-function sortingDirection(SORTING, a, b, variant) {
+import { isArrayCount, isObject, isSetField } from "./";
+import { SORTING } from "../constants";
+function sortingDirection(a, b, variant) {
     if (variant === SORTING.reverse) {
         if (a < b) {
             return 1;
@@ -16,7 +17,7 @@ function sortingDirection(SORTING, a, b, variant) {
     }
     return 0;
 }
-const sorting = ({ array, variant, properties, type, SORTING, }) => {
+const sorting = ({ array, variant, properties, type, }) => {
     if (!isArrayCount(array)) {
         return [];
     }
@@ -29,21 +30,21 @@ const sorting = ({ array, variant, properties, type, SORTING, }) => {
                     return A - B;
                 }
                 if (variant === SORTING.reverse) {
-                    return sortingDirection(SORTING, A, B, SORTING.reverse);
+                    return sortingDirection(A, B, SORTING.reverse);
                 }
-                return sortingDirection(SORTING, A, B);
+                return sortingDirection(A, B);
             }
             return 0;
         });
     }
     return array.sort((a, b) => {
         if (variant === SORTING.reverse) {
-            return sortingDirection(SORTING, a, b, SORTING.reverse);
+            return sortingDirection(a, b, SORTING.reverse);
         }
         if (type === SORTING.number) {
-            return sortingDirection(SORTING, Number(a), Number(b));
+            return sortingDirection(Number(a), Number(b));
         }
-        return sortingDirection(SORTING, a, b);
+        return sortingDirection(a, b);
     });
 };
 export default sorting;

@@ -1,4 +1,4 @@
-import { isArrayCount } from '../index';
+import { isArrayCount } from "..";
 const isSomeTrueField = (source, field) => {
     if (isArrayCount(source)) {
         for (let i = 0; i < source.length; i++) {

@@ -1,6 +1,20 @@
-import format from 'date-fns/format';
+import { format, formatISO, isDate } from 'date-fns';
 import ruLocale from 'date-fns/locale/ru';
-const getDateFormatText = (date, formatType = 'd MMMM yyyy') => {
-    return date && format(new Date(date), formatType, { locale: ruLocale });
+import { DATE_FORMAT_SERVER } from "../constants";
+import { isNumber, isString } from "./";
+// Приводит дату в строку в определенном формате
+const getDateFormatText = (date, formatType = 'dd MMM yyyy') => {
+    if (date && (isDate(date) || isString(date) || isNumber(date))) {
+        const _date = new Date(date);
+        if (formatType === DATE_FORMAT_SERVER) {
+            return formatISO(_date); // Перевод даты в формат для сервера и датапикера
+        }
+        else {
+            return format(_date, formatType, { locale: ruLocale });
+        }
+    }
+    else {
+        return '';
+    }
 };
 export default getDateFormatText;

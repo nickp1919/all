@@ -1,4 +1,4 @@
-import { declOfNum } from './index';
+import { declOfNum } from "./";
 export const secondsToHours = (time) => {
     let result = '';
     if (time < 3600) {

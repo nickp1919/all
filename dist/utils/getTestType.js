@@ -1,4 +1,5 @@
-const getTestType = (TEST, status, option) => {
+import { TEST } from "../constants";
+const getTestType = (status, option) => {
     const { TYPE } = TEST;
     const { test, survey } = option || {};
     switch (status) {

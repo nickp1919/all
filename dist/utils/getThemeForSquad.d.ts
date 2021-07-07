@@ -1,2 +1,2 @@
-declare const getThemeForSquad: (STATUSES: any, status: string) => "default" | "success" | "danger";
+declare const getThemeForSquad: (status: string) => "default" | "success" | "danger";
 export default getThemeForSquad;

@@ -1,6 +1,4 @@
-function isObject(obj) {
-    return typeof obj === 'object' && obj;
-}
+import { isObject } from "./";
 export function cloneArray(array) {
     if (Array.isArray(array)) {
         return array.map(function (el) {
@@ -15,9 +13,7 @@ export function cloneArray(array) {
     }
     return [];
 }
-// TODO: any
 export function deepCloneObject(source, target) {
-    // TODO: any
     if (typeof target !== 'object' || !target) {
         return;
     }
@@ -41,7 +37,7 @@ export function cloneObject(target) {
     if (typeof target !== 'object' || !target) {
         return;
     }
-    const _target = {}; // TODO: any
+    const _target = {};
     for (const sourceKey in target) {
         if (Object.prototype.hasOwnProperty.call(target, sourceKey)) {
             _target[sourceKey] = target[sourceKey];

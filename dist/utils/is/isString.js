@@ -1,4 +1,2 @@
-const isString = (value) => {
-    return typeof value === 'string';
-};
+const isString = (value) => typeof value === 'string';
 export default isString;

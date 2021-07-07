@@ -1,4 +1,4 @@
-import { isArrayCount } from './index';
+import { isArrayCount } from "./";
 const arrayMaxField = (arr, field) => {
     if (!isArrayCount(arr)) {
         return 0;

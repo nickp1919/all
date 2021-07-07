@@ -1,3 +1,4 @@
+import { FontPropType, SizeButton, TypeButton, ExtraTypeButton, SizeModal } from '@types';
 export declare const API: {
     http: string;
     img: string;
@@ -8,19 +9,15 @@ export declare const SORTING: {
     number: string;
 };
 export declare const NO_OVERFLOW_CLASS = "assessment-client-overflow";
-export declare type ExtraType = 'cancel' | 'textButton' | 'warning';
 export declare const BUTTON_EXTRA_TYPE: {
-    [key: string]: ExtraType;
+    [key: string]: ExtraTypeButton;
 };
-export declare type Type = 'primary' | 'secondary' | 'tertiary' | undefined;
 export declare const BUTTON_PULSE_TYPE: {
-    [key: string]: Type;
+    [key: string]: TypeButton;
 };
-export declare type Size = 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl';
 export declare const BUTTON_SIZE: {
-    [key: string]: Size;
+    [key: string]: SizeButton;
 };
-export declare type SizeModal = 's' | 'm' | 'l';
 export declare const MODAL_SIZE: {
     [key: string]: SizeModal;
 };
@@ -250,3 +247,4 @@ export declare const RESOLUTION: {
 export declare const INDENTS: {
     default: string;
 };
+export declare const FontType: FontPropType;

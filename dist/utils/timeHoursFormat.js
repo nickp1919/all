@@ -1,4 +1,4 @@
-import { declOfNum } from './index';
+import { declOfNum } from "./";
 const timeHoursFormat = (time, isShort = false) => {
     let result = '';
     const hours = Math.floor(time / 60);

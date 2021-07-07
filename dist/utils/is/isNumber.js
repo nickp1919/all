@@ -1,4 +1,2 @@
-const isNumber = (field) => {
-    return typeof field === 'number';
-};
+const isNumber = (field) => typeof field === 'number';
 export default isNumber;

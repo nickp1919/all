@@ -1,4 +1,4 @@
-import { isNull } from '../index';
+import { isNull } from "..";
 export const isObject = (value) => {
     return !isNull(value) && typeof value === 'object';
 };

@@ -1,4 +1,4 @@
-import { isArrayCount, isString } from './index';
+import { isArrayCount, isString } from "./";
 export function hexToRgba(hexCode, opacity = 100) {
     if (!isString(hexCode)) {
         return '';

@@ -38,9 +38,9 @@ export const CREATE_QUESTION = {
             value: 'SINGLE',
         },
         /*MULTIPLE: {
-            name: 'Множественный',
-            value: 'MULTIPLE',
-        },*/
+                name: 'Множественный',
+                value: 'MULTIPLE',
+            },*/
     },
     SAVE_TYPE: {
         NEW: 'new',
@@ -144,10 +144,10 @@ export const PROJECT = {
             url: 'scales',
         },
         /*{
-            name: 'отчетность',
-            url: 'reports',
-            disabled: true,
-        },*/
+                name: 'отчетность',
+                url: 'reports',
+                disabled: true,
+            },*/
     ],
     TYPE: {
         SBERTEST: { value: 'SBERTEST', name: 'шкалы оценивания' },

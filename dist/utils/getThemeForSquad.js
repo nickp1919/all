@@ -1,4 +1,5 @@
-const getThemeForSquad = (STATUSES, status) => {
+import { STATUSES } from "../constants";
+const getThemeForSquad = (status) => {
     const { TEST_COMPLETED } = STATUSES;
     switch (status) {
         case TEST_COMPLETED.SUCCESS:

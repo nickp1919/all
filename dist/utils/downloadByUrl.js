@@ -1,4 +1,4 @@
-import { API } from '@constants';
+import { API } from "../constants";
 function downloadByUrl({ name, link }) {
     const a = document.createElement('a');
     const type = name.slice(name.lastIndexOf('.') + 1);
