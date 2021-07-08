@@ -1,2 +1,2 @@
-import { TextBlock } from '@modules-lib/TextBlock/TextBlock';
+import { TextBlock } from './TextBlock';
 export default TextBlock;

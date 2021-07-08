@@ -1,2 +1,2 @@
-import { BoxBlock } from "./BoxBlock";
+import { BoxBlock } from './BoxBlock';
 export default BoxBlock;

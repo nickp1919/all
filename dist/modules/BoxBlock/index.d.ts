@@ -1,2 +1,2 @@
-import { BoxBlock } from '@modules-lib/BoxBlock/BoxBlock';
+import { BoxBlock } from './BoxBlock';
 export default BoxBlock;

@@ -18,12 +18,8 @@ export default `
 		  display: none;
 		}
 	}
- 
-	.assessment-client-modal-beta {
-		input::-ms-clear {
-		  display: none;
-		}
 	
+	.assessment-client-modal-page {
 		z-index: 199 !important;
 	}
 `;

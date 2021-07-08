@@ -1,2 +1,2 @@
-import { Notificator } from "./Notificator";
+import { Notificator } from './Notificator';
 export default Notificator;

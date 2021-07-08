@@ -1,2 +1,3 @@
 import UIAdaptive from "./UIAdaptive";
-export { UIAdaptive };
+import ModalOur from "./ModalOur";
+export { UIAdaptive, ModalOur };

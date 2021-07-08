@@ -1,2 +1,2 @@
-import { Notificator } from '@modules-lib/Notificator/Notificator';
+import { Notificator } from './Notificator';
 export default Notificator;
