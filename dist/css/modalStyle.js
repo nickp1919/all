@@ -1,4 +1,4 @@
-import { COLORS } from "../typography";
+import { colors } from "../typography";
 export default `
 	.assessment-client-modal {
 		box-sizing: border-box;
@@ -10,7 +10,7 @@ export default `
 		button {
 			&:disabled {
 				cursor: not-allowed;
-				color: ${COLORS.grays.disable};
+				color: ${colors.grays.disable};
 			}
 		}
 		

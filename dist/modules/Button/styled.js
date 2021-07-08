@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Button } from '@pulse/ui/components/Button';
-import { COLORS } from "../../typography";
+import { colors } from "../../typography";
 import { BUTTON_EXTRA_TYPE } from "../../constants";
 const { TEXT_BUTTON, CANCEL_BUTTON, WARNING_BUTTON } = BUTTON_EXTRA_TYPE;
 export const StyledButton = styled(Button) `
@@ -11,36 +11,36 @@ export const StyledButton = styled(Button) `
     if (extraType === TEXT_BUTTON) {
         return `
        ${commonStyles}
-       color: ${COLORS.textAction};
+       color: ${colors.textAction};
       
        &:hover, 
        &:focus, 
        &:active {
-        color: ${COLORS.textAction};
+        color: ${colors.textAction};
        }
     `;
     }
     if (extraType === CANCEL_BUTTON) {
         return `
        ${commonStyles}
-       color: ${COLORS.grays.text};
+       color: ${colors.grays.text};
        
        &:hover, 
        &:focus, 
        &:active {
-        color: ${COLORS.grays.text};
+        color: ${colors.grays.text};
        }
     `;
     }
     if (extraType === WARNING_BUTTON) {
         return `
        ${commonStyles}
-       color: ${COLORS.error};
+       color: ${colors.error};
        
        &:hover, 
        &:focus, 
        &:active {
-        color: ${COLORS.error};
+        color: ${colors.error};
        }
     `;
     }

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { COLORS, pulseTypography } from '@typography-lib';
+import { colors, pulseTypography } from '@typography-lib';
 
 import { FontPropType } from '@types-lib';
 import { Size } from '@pulse/ui/components/Title/types';
@@ -28,13 +28,8 @@ import {
   BodyDiv,
 } from '@css-lib/technicalStyle';
 
-import notificationStyle from '@css-lib/notificationStyle';
-import modalStyle from '@css-lib/modalStyle';
-import tooltipStyle from '@css-lib/tooltipStyle';
-import { UIAdaptiveCol, gridCol } from '@css-lib/methods';
-
 export {
-  COLORS,
+  colors,
   pulseTypography,
   Flex,
   AlignCenter,
@@ -56,11 +51,6 @@ export {
   Wrap,
   HideBlock,
   BodyDiv,
-  notificationStyle,
-  modalStyle,
-  tooltipStyle,
-  UIAdaptiveCol,
-  gridCol,
 };
 
 export const BorderRadius = {
@@ -203,5 +193,16 @@ export const MODAL_WIDTH = {
 
 export const DividerDiv = styled.div`
   width: 100%;
-  border-bottom: 1px solid ${COLORS.grays.separator};
+  border-bottom: 1px solid ${colors.grays.separator};
 `;
+
+export const spaceTheme = [
+  0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84,
+];
+
+import notificationStyle from '@css-lib/notificationStyle';
+import modalStyle from '@css-lib/modalStyle';
+import tooltipStyle from '@css-lib/tooltipStyle';
+import { UIAdaptiveCol, gridCol } from '@css-lib/methods';
+
+export { notificationStyle, modalStyle, tooltipStyle, UIAdaptiveCol, gridCol };

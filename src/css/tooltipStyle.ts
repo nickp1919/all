@@ -1,4 +1,4 @@
-import { COLORS } from '@typography-lib';
+import { colors } from '@typography-lib';
 
 export default `
 	.rc-tooltip.rc-tooltip-zoom-appear,
@@ -89,7 +89,7 @@ export default `
 	  padding: 10px 12px;
 	  text-align: left;
 	  text-decoration: none;
-	  background-color: ${COLORS.black};
+	  background-color: ${colors.black};
 	  border-radius: 4px;
 	  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
 	}
@@ -106,7 +106,7 @@ export default `
 	  bottom: 4px;
 	  margin-left: -5px;
 	  border-width: 5px 5px 0;
-	  border-top-color: ${COLORS.black};
+	  border-top-color: ${colors.black};
 	}
 	.rc-tooltip-placement-top .rc-tooltip-arrow {
 	  left: 50%;
@@ -123,7 +123,7 @@ export default `
 	  left: 4px;
 	  margin-top: -5px;
 	  border-width: 5px 5px 5px 0;
-	  border-right-color: ${COLORS.black};
+	  border-right-color: ${colors.black};
 	}
 	.rc-tooltip-placement-right .rc-tooltip-arrow {
 	  top: 50%;
@@ -141,7 +141,7 @@ export default `
 	  right: 4px;
 	  margin-top: -5px;
 	  border-width: 5px 0 5px 5px;
-	  border-left-color: ${COLORS.black};
+	  border-left-color: ${colors.black};
 	}
 	.rc-tooltip-placement-left .rc-tooltip-arrow {
 	  top: 50%;
@@ -159,7 +159,7 @@ export default `
 	  top: 4px;
 	  margin-left: -5px;
 	  border-width: 0 5px 5px;
-	  border-bottom-color: ${COLORS.black};
+	  border-bottom-color: ${colors.black};
 	}
 	.rc-tooltip-placement-bottom .rc-tooltip-arrow {
 	  left: 50%;

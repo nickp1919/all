@@ -1,3 +1,3 @@
-import { COLORS } from './colorsStyle';
+import { colors } from './colorsStyle';
 import pulseTypography from './pulseTypography';
-export { COLORS, pulseTypography };
+export { colors, pulseTypography };

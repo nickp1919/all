@@ -1,11 +1,7 @@
 import styled from 'styled-components';
-import { COLORS, pulseTypography } from "./typography";
+import { colors, pulseTypography } from "./typography";
 import { Flex, AlignCenter, AlignBaseline, AlignTop, JustifyTopStart, AJCenter, JustifyCenter, JSBetween, JSCenterBetween, JSEnd, WBlur, TextLink, SeparatorDiv, HiddenDiv, Grid, BorderBox, InlineBlock, Wrap, HideBlock, BodyDiv, } from "./css/technicalStyle";
-import notificationStyle from "./css/notificationStyle";
-import modalStyle from "./css/modalStyle";
-import tooltipStyle from "./css/tooltipStyle";
-import { UIAdaptiveCol, gridCol } from "./css/methods";
-export { COLORS, pulseTypography, Flex, AlignCenter, AlignBaseline, AlignTop, JustifyTopStart, AJCenter, JustifyCenter, JSBetween, JSCenterBetween, JSEnd, WBlur, TextLink, SeparatorDiv, HiddenDiv, Grid, BorderBox, InlineBlock, Wrap, HideBlock, BodyDiv, notificationStyle, modalStyle, tooltipStyle, UIAdaptiveCol, gridCol, };
+export { colors, pulseTypography, Flex, AlignCenter, AlignBaseline, AlignTop, JustifyTopStart, AJCenter, JustifyCenter, JSBetween, JSCenterBetween, JSEnd, WBlur, TextLink, SeparatorDiv, HiddenDiv, Grid, BorderBox, InlineBlock, Wrap, HideBlock, BodyDiv, };
 export const BorderRadius = {
     default: {
         borderRadius: 8,
@@ -136,5 +132,13 @@ export const MODAL_WIDTH = {
 };
 export const DividerDiv = styled.div `
   width: 100%;
-  border-bottom: 1px solid ${COLORS.grays.separator};
+  border-bottom: 1px solid ${colors.grays.separator};
 `;
+export const spaceTheme = [
+    0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84,
+];
+import notificationStyle from "./css/notificationStyle";
+import modalStyle from "./css/modalStyle";
+import tooltipStyle from "./css/tooltipStyle";
+import { UIAdaptiveCol, gridCol } from "./css/methods";
+export { notificationStyle, modalStyle, tooltipStyle, UIAdaptiveCol, gridCol };

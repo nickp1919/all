@@ -1,4 +1,4 @@
-export declare const COLORS: {
+export declare const colors: {
     bars70: string;
     bgPrimary: string;
     bgSecondary: string;

@@ -1,6 +1,6 @@
 import pulseColors from '@pulse/colors/colors.json';
 const pulse = pulseColors.light;
-export const COLORS = {
+export const colors = {
     black: pulse.simpleBlack,
     white: pulse.simpleWhite,
     error: pulse.systemError,

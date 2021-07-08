@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import css from '@styled-system/css';
 
-import { COLORS } from '@typography-lib';
+import { colors } from '@typography-lib';
 
 export const Flex = `
   display: flex;
@@ -60,7 +60,7 @@ export const WBlur = `
 export const SeparatorDiv = styled.div`
   width: 100%;
   height: 1px;
-  background: ${COLORS.grays.border};
+  background: ${colors.grays.border};
 `;
 
 export const HiddenDiv = styled.div`
@@ -92,7 +92,7 @@ export const Wrap = `
 
 export const TextLink = styled.a`
   ${InlineBlock}
-  color: ${COLORS.textAction};
+  color: ${colors.textAction};
 `;
 
 export const Grid = `

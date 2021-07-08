@@ -1,4 +1,4 @@
-import { COLORS } from '@typography-lib';
+import { colors } from '@typography-lib';
 
 export default `
 	.assessment-client-modal {
@@ -11,7 +11,7 @@ export default `
 		button {
 			&:disabled {
 				cursor: not-allowed;
-				color: ${COLORS.grays.disable};
+				color: ${colors.grays.disable};
 			}
 		}
 		
