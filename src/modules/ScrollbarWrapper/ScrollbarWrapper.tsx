@@ -1,5 +1,5 @@
 import React from 'react';
-import { isChrome } from 'react-device-detect';
+//import { isChrome } from 'react-device-detect';
 
 import { ScrollbarWrap } from './styled';
 import { ScrollbarWrapperProps } from './types';
@@ -12,7 +12,8 @@ export const ScrollbarWrapper = React.forwardRef(
       // выводим строку
       viewStyle = {
         position: 'absolute',
-        right: isChrome ? '-16px' : '-17px',
+        //right: isChrome ? '-16px' : '-17px',
+        right: 0,
         top: 0,
         left: 0,
         bottom: 0,
