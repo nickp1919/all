@@ -1,4 +1,4 @@
-import { isArrayCount } from '@utils';
+import { isArrayCount } from '@utils-lib';
 
 const isSomeTrueField = <T>(source: any, field: string) => {
   if (isArrayCount(source)) {

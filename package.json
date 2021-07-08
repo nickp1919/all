@@ -1,11 +1,13 @@
 {
   "name": "@assessment-hrplatform/all",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "Сборник полезных утилит",
   "files": [
-    "dist/"
+    "dist/",
+    "tsconfig.json"
   ],
+  "main": "dist/",
   "scripts": {
     "clean": "rimraf dist",
     "build:tsc": "ttsc",

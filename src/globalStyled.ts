@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-import { FontPropType } from '@types';
+import { COLORS, pulseTypography } from '@typography-lib';
+
+import { FontPropType } from '@types-lib';
 import { Size } from '@pulse/ui/components/Title/types';
 
 import {
@@ -24,9 +26,16 @@ import {
   Wrap,
   HideBlock,
   BodyDiv,
-} from '@css/technicalStyle';
+} from '@css-lib/technicalStyle';
+
+import notificationStyle from '@css-lib/notificationStyle';
+import modalStyle from '@css-lib/modalStyle';
+import tooltipStyle from '@css-lib/tooltipStyle';
+import { UIAdaptiveCol, gridCol } from '@css-lib/methods';
 
 export {
+  COLORS,
+  pulseTypography,
   Flex,
   AlignCenter,
   AlignBaseline,
@@ -47,6 +56,11 @@ export {
   Wrap,
   HideBlock,
   BodyDiv,
+  notificationStyle,
+  modalStyle,
+  tooltipStyle,
+  UIAdaptiveCol,
+  gridCol,
 };
 
 export const BorderRadius = {
@@ -182,19 +196,12 @@ export const EmojiDiv = styled.div`
   line-height: 40px;
 `;
 
-export const FutureCardGradient = `
-  linear-gradient(0deg, rgba(176, 176, 176, 0.6), rgba(176, 176, 176, 0.6))
-`;
-
-export const ShortText = `
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2; //линия у которой бубут точки
-  -webkit-box-orient: vertical;
-`;
-
 export const MODAL_WIDTH = {
   small: 'width: 444px;',
   medium: 'width: 836px;',
 };
+
+export const DividerDiv = styled.div`
+  width: 100%;
+  border-bottom: 1px solid ${COLORS.grays.separator};
+`;

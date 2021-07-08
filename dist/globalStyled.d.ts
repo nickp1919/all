@@ -1,7 +1,12 @@
-import { FontPropType } from '@types';
+import { COLORS, pulseTypography } from '@typography-lib';
+import { FontPropType } from '@types-lib';
 import { Size } from '@pulse/ui/components/Title/types';
-import { Flex, AlignCenter, AlignBaseline, AlignTop, JustifyTopStart, AJCenter, JustifyCenter, JSBetween, JSCenterBetween, JSEnd, WBlur, TextLink, SeparatorDiv, HiddenDiv, Grid, BorderBox, InlineBlock, Wrap, HideBlock, BodyDiv } from '@css/technicalStyle';
-export { Flex, AlignCenter, AlignBaseline, AlignTop, JustifyTopStart, AJCenter, JustifyCenter, JSBetween, JSCenterBetween, JSEnd, WBlur, TextLink, SeparatorDiv, HiddenDiv, Grid, BorderBox, InlineBlock, Wrap, HideBlock, BodyDiv, };
+import { Flex, AlignCenter, AlignBaseline, AlignTop, JustifyTopStart, AJCenter, JustifyCenter, JSBetween, JSCenterBetween, JSEnd, WBlur, TextLink, SeparatorDiv, HiddenDiv, Grid, BorderBox, InlineBlock, Wrap, HideBlock, BodyDiv } from '@css-lib/technicalStyle';
+import notificationStyle from '@css-lib/notificationStyle';
+import modalStyle from '@css-lib/modalStyle';
+import tooltipStyle from '@css-lib/tooltipStyle';
+import { UIAdaptiveCol, gridCol } from '@css-lib/methods';
+export { COLORS, pulseTypography, Flex, AlignCenter, AlignBaseline, AlignTop, JustifyTopStart, AJCenter, JustifyCenter, JSBetween, JSCenterBetween, JSEnd, WBlur, TextLink, SeparatorDiv, HiddenDiv, Grid, BorderBox, InlineBlock, Wrap, HideBlock, BodyDiv, notificationStyle, modalStyle, tooltipStyle, UIAdaptiveCol, gridCol, };
 export declare const BorderRadius: {
     default: {
         borderRadius: number;
@@ -100,9 +105,8 @@ export declare const TITLE_SIZE: {
     [key: string]: Size;
 };
 export declare const EmojiDiv: import("styled-components").StyledComponent<"div", any, {}, never>;
-export declare const FutureCardGradient = "\n  linear-gradient(0deg, rgba(176, 176, 176, 0.6), rgba(176, 176, 176, 0.6))\n";
-export declare const ShortText = "\n  overflow: hidden;\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 2; //\u043B\u0438\u043D\u0438\u044F \u0443 \u043A\u043E\u0442\u043E\u0440\u043E\u0439 \u0431\u0443\u0431\u0443\u0442 \u0442\u043E\u0447\u043A\u0438\n  -webkit-box-orient: vertical;\n";
 export declare const MODAL_WIDTH: {
     small: string;
     medium: string;
 };
+export declare const DividerDiv: import("styled-components").StyledComponent<"div", any, {}, never>;

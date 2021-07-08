@@ -3,7 +3,7 @@ export type OptionType = {
   survey?: string;
 };
 
-import { TEST } from '@constants';
+import { TEST } from '@constants-lib';
 
 const getTestType = (status: string, option?: OptionType) => {
   const { TYPE } = TEST;

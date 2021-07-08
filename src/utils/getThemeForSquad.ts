@@ -1,4 +1,4 @@
-import { STATUSES } from '@constants';
+import { STATUSES } from '@constants-lib';
 
 const getThemeForSquad = (status: string) => {
   const { TEST_COMPLETED } = STATUSES;

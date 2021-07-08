@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import { Notificator } from "./";
+import { Notificator } from "../modules";
 export default function downloadFile({ fetchUrl, setDisabled, fileName, type, }) {
     if (setDisabled) {
         setDisabled(true);

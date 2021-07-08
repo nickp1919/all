@@ -1,4 +1,4 @@
-import { FontPropType, SizeButton, TypeButton, ExtraTypeButton, SizeModal } from '@types';
+import { FontPropType, SizeButton, TypeButton, ExtraTypeButton, SizeModal } from '@types-lib';
 
 export const API = {
   http: '/api-web/assessment/',

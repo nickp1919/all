@@ -1,2 +1,2 @@
-import UIAdaptive from '@common/UIAdaptive';
+import UIAdaptive from '@common-lib/UIAdaptive';
 export { UIAdaptive };

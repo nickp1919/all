@@ -1,4 +1,4 @@
-import { declOfNum } from '@utils';
+import { declOfNum } from '@utils-lib';
 
 export const secondsToHours = (time: number) => {
   let result = '';

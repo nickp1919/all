@@ -1,6 +1,11 @@
 import styled from 'styled-components';
+import { COLORS, pulseTypography } from "./typography";
 import { Flex, AlignCenter, AlignBaseline, AlignTop, JustifyTopStart, AJCenter, JustifyCenter, JSBetween, JSCenterBetween, JSEnd, WBlur, TextLink, SeparatorDiv, HiddenDiv, Grid, BorderBox, InlineBlock, Wrap, HideBlock, BodyDiv, } from "./css/technicalStyle";
-export { Flex, AlignCenter, AlignBaseline, AlignTop, JustifyTopStart, AJCenter, JustifyCenter, JSBetween, JSCenterBetween, JSEnd, WBlur, TextLink, SeparatorDiv, HiddenDiv, Grid, BorderBox, InlineBlock, Wrap, HideBlock, BodyDiv, };
+import notificationStyle from "./css/notificationStyle";
+import modalStyle from "./css/modalStyle";
+import tooltipStyle from "./css/tooltipStyle";
+import { UIAdaptiveCol, gridCol } from "./css/methods";
+export { COLORS, pulseTypography, Flex, AlignCenter, AlignBaseline, AlignTop, JustifyTopStart, AJCenter, JustifyCenter, JSBetween, JSCenterBetween, JSEnd, WBlur, TextLink, SeparatorDiv, HiddenDiv, Grid, BorderBox, InlineBlock, Wrap, HideBlock, BodyDiv, notificationStyle, modalStyle, tooltipStyle, UIAdaptiveCol, gridCol, };
 export const BorderRadius = {
     default: {
         borderRadius: 8,
@@ -125,17 +130,11 @@ export const EmojiDiv = styled.div `
   font-size: 40px;
   line-height: 40px;
 `;
-export const FutureCardGradient = `
-  linear-gradient(0deg, rgba(176, 176, 176, 0.6), rgba(176, 176, 176, 0.6))
-`;
-export const ShortText = `
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2; //линия у которой бубут точки
-  -webkit-box-orient: vertical;
-`;
 export const MODAL_WIDTH = {
     small: 'width: 444px;',
     medium: 'width: 836px;',
 };
+export const DividerDiv = styled.div `
+  width: 100%;
+  border-bottom: 1px solid ${COLORS.grays.separator};
+`;

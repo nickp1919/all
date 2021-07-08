@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Text } from '@pulse/ui/components/Text';
 
-import { FontType } from '@constants';
+import { FontType } from '@constants-lib';
 
-import { IBoxProps } from '@types';
+import { IBoxProps } from '@types-lib';
 
 export const TextBlock: React.FC<IBoxProps> = React.forwardRef((props, ref) => {
   const {

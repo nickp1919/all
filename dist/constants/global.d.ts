@@ -1,4 +1,4 @@
-import { FontPropType, SizeButton, TypeButton, ExtraTypeButton, SizeModal } from '@types';
+import { FontPropType, SizeButton, TypeButton, ExtraTypeButton, SizeModal } from '@types-lib';
 export declare const API: {
     http: string;
     img: string;

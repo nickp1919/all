@@ -6,7 +6,7 @@ import { ReactComponent as CloseCircleSvg } from './icons/close-circle.svg';
 import { NotificatorWrapperDiv, ErrorIconDiv, InfoIconDiv, SuccessIconDiv, NotificatorText, } from './styled';
 let notification = null;
 Notification.newInstance({ prefixCls: 'assessment-rc-notification', style: { top: 30, right: 30 } }, (n) => (notification = n));
-class Notificator {
+export class Notificator {
 }
 Notificator.notify = (message, type, options = {}) => {
     const icon = getIcon(type);
@@ -46,4 +46,3 @@ function getIcon(type) {
     return (React.createElement(Outer, null,
         React.createElement(Inner, null)));
 }
-export default Notificator;

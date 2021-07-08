@@ -1,6 +1,6 @@
 import React from 'react';
 import { TOptions } from './types';
-declare class Notificator {
+export declare class Notificator {
     static notify: (message: string, type: string, options?: TOptions) => void;
     static error: (message: string, options?: Partial<{
         key: string;
@@ -32,4 +32,3 @@ declare class Notificator {
     static destroy: () => void;
     static removeNotice: (key: string) => void;
 }
-export default Notificator;

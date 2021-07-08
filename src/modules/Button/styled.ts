@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { Button } from '@pulse/ui/components/Button';
 import { ButtonVariants } from '@pulse/ui/components/Button/types';
 
-import { COLORS } from '@typography';
-import { BUTTON_EXTRA_TYPE } from '@constants';
+import { COLORS } from '@typography-lib';
+import { BUTTON_EXTRA_TYPE } from '@constants-lib';
 
 import { ExtraType } from './types';
 

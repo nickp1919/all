@@ -34,12 +34,12 @@ export const breakpoints = {
 import styled, { css } from 'styled-components';
 import isEmpty from 'lodash.isempty';
 
-import BoxBlock from '@modules/BoxBlock';
+import BoxBlock from '@modules-lib/BoxBlock';
 
-import { RESOLUTION, SORTING, INDENTS } from '@constants';
-import { AlignTop, Wrap, JSBetween, HideBlock } from '@globalStyled';
+import { RESOLUTION, SORTING, INDENTS } from '@constants-lib';
+import { AlignTop, Wrap, JSBetween, HideBlock } from '@globalStyled-lib';
 
-import { isArrayCount, sorting, arrayMaxField } from '@utils';
+import { isArrayCount, sorting, arrayMaxField } from '@utils-lib';
 
 import { TBreakpoints, UIAdaptiveOptions, WidthBlocks } from './types';
 

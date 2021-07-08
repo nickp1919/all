@@ -1,4 +1,4 @@
-import { API } from '@constants';
+import { API } from '@constants-lib';
 
 // на платформе используется undefined для отрисовки заглушки
 const getImageUrl = (imageUrl: string | undefined) => {

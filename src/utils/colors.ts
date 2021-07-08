@@ -1,4 +1,4 @@
-import { isArrayCount, isString } from '@utils';
+import { isArrayCount, isString } from '@utils-lib';
 
 export function hexToRgba<T>(hexCode: T, opacity = 100) {
   if (!isString(hexCode)) {

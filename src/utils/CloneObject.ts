@@ -1,4 +1,4 @@
-import { isObject } from '@utils';
+import { isObject } from '@utils-lib';
 
 export function cloneArray<T extends object>(array: T[]): Array<T> {
   if (Array.isArray(array)) {

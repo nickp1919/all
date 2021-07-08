@@ -20,7 +20,7 @@ Notification.newInstance(
   (n) => (notification = n)
 );
 
-class Notificator {
+export class Notificator {
   static notify = (message: string, type: string, options: TOptions = {}) => {
     const icon = getIcon(type);
     const content: React.ReactNode = (
@@ -75,5 +75,3 @@ function getIcon(type: string): ReactElement {
     </Outer>
   );
 }
-
-export default Notificator;
