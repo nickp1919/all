@@ -34,7 +34,7 @@ import windowCheck from '@utils-lib/windowCheck';
 import getInitialsUser from '@utils-lib/getInitialsUser';
 import getDateFormatText from '@utils-lib/getDateFormatText';
 import getThemeForSquad from '@utils-lib/getThemeForSquad';
-import getBgColorTag from '@utils-lib/getBgColorTag';
+import { getBgColorTag } from '@utils-lib/getBgColorTag';
 import arrayMaxField from '@utils-lib/arrayMaxField';
 import chunk from '@utils-lib/chunk';
 import omit from '@utils-lib/omit';

@@ -2,8 +2,9 @@
  * @param text - строка, которую нужно сократить
  * @param n - количество видимых символов
  * @param symbol - символ, который нужно поставить в конце строки */
+import { isString } from "./";
 const getShortName = (text, n = 20, symbol = '...') => {
-    if (!text) {
+    if (!text && !isString(text)) {
         return '';
     }
     let result;

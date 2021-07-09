@@ -3,8 +3,10 @@
  * @param n - количество видимых символов
  * @param symbol - символ, который нужно поставить в конце строки */
 
+import { isString } from '@utils-lib';
+
 const getShortName = (text: string, n = 20, symbol = '...') => {
-  if (!text) {
+  if (!text && !isString(text)) {
     return '';
   }
 

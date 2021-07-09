@@ -1,4 +1,5 @@
 import { isArrayCount, isString } from '@utils-lib';
+import { colors } from '@globalStyled-lib';
 
 export function hexToRgba<T>(hexCode: T, opacity = 100) {
   if (!isString(hexCode)) {
@@ -18,11 +19,13 @@ export function hexToRgba<T>(hexCode: T, opacity = 100) {
   return `rgba(${r},${g},${b},${opacity / 100})`;
 }
 
-export function getColorFromTheme(COLORS: any, name: string) {
+export function getColorFromTheme(name: string) {
+  if (!name && !isString(name)) return '';
+
   const arr = name.split('.');
 
   if (isArrayCount(arr) === 1) {
-    return COLORS[name as keyof typeof COLORS];
+    return colors[name as keyof typeof colors];
   }
 
   return arr.reduce<any>((result, item) => {
@@ -30,5 +33,5 @@ export function getColorFromTheme(COLORS: any, name: string) {
       result = result[item];
     }
     return result;
-  }, COLORS);
+  }, colors);
 }

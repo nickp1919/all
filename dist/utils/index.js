@@ -33,7 +33,7 @@ import windowCheck from "./windowCheck";
 import getInitialsUser from "./getInitialsUser";
 import getDateFormatText from "./getDateFormatText";
 import getThemeForSquad from "./getThemeForSquad";
-import getBgColorTag from "./getBgColorTag";
+import { getBgColorTag } from "./getBgColorTag";
 import arrayMaxField from "./arrayMaxField";
 import chunk from "./chunk";
 import omit from "./omit";
