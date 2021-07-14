@@ -1,8 +1,10 @@
 import React from 'react';
 
+import { getBgColorTag } from '@utils-lib';
+
 import { ColorType, State } from './types';
 import { FilterStyled } from './styled';
-import { getBgColorTag } from '@utils';
+
 
 const FilterBlock = React.forwardRef<
   HTMLAnchorElement,

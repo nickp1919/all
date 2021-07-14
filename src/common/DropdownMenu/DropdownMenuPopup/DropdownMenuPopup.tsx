@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
 
-import { TextBlock } from '@modules';
+import { TextBlock } from '@modules-lib';
 
-import { isArrayCount, useClickOutside } from '@utils';
+import { isArrayCount, useClickOutside } from '@utils-lib';
 
-import { FONT_VARIANTS } from '@globalStyled';
+import { FONT_VARIANTS } from '@globalStyled-lib';
 
 import { DropdownListItem } from '../DropdownListItem';
 

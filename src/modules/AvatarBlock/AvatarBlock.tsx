@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Avatar } from '@pulse/ui/components/Avatar';
 
-import { getInitialsUser, getImageUrl } from '@utils';
+import { getInitialsUser, getImageUrl } from '@utils-lib';
 
 import { AvatarProps } from './types';
 

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { TextBlock } from '@modules';
+import { TextBlock } from '@modules-lib';
 
-import { isUndefined } from '@utils';
+import { isUndefined } from '@utils-lib';
 
-import { IconsSizes } from '@globalStyled';
+import { IconsSizes } from '@globalStyled-lib';
 
 import { SubtitleWrapDiv, SubtitleTextDiv, SubtitleCountDiv, PlusCircleIconSVG } from './styled';
 import { TSubtitleProps } from './types';

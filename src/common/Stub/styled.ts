@@ -1,10 +1,10 @@
 import styled from 'styled-components/macro';
 import css from '@styled-system/css';
 
-import { BoxBlock, TextBlock } from '@modules';
+import { BoxBlock, TextBlock } from '@modules-lib';
 
-import { AJCenter, COLORS } from '@globalStyled';
-import { IBoxProps } from '@types';
+import { AJCenter, colors } from '@globalStyled-lib';
+import { IBoxProps } from '@types-lib';
 
 export const StubWrapDiv = styled(BoxBlock)`
   ${AJCenter}
@@ -24,6 +24,6 @@ export const StubContentDiv = styled(BoxBlock)`
 `;
 
 export const StubTextBlock = styled(TextBlock)<IBoxProps>`
-  color: ${COLORS.grays.text};
+  color: ${colors.grays.text};
   ${css({ mt: 4 })}
 `;

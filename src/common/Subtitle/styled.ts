@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import css from '@styled-system/css';
 
-import { BoxBlock } from '@modules';
+import { BoxBlock } from '@modules-lib';
 
-import { AlignCenter, AlignBaseline, COLORS } from '@globalStyled';
+import { AlignCenter, AlignBaseline, colors } from '@globalStyled-lib';
 
 import { ReactComponent as PlusCircle } from '@assets/plus-circle.svg';
 
@@ -31,7 +31,7 @@ export const SubtitleTextDiv = styled(BoxBlock)`
 
 export const SubtitleCountDiv = styled(BoxBlock)`
   ${css({ ml: 2 })}
-  color: ${COLORS.grays.text};
+  color: ${colors.grays.text};
 
   & > * {
     margin-bottom: 0;
@@ -44,7 +44,7 @@ export const PlusCircleIconSVG = styled(PlusCircle)<{
   ${css({ ml: 3 })}
   display: block;
   ${({ iconsize }) => iconsize}
-  fill: ${COLORS.textAction};
+  fill: ${colors.textAction};
   cursor: pointer;
 
   &:hover {
