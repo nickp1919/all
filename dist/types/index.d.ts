@@ -14,4 +14,13 @@ declare type FontPropType = {
     };
 };
 declare type SizeModal = 's' | 'm' | 'l';
-export { IBoxProps, FontPropType, SizeModal, SizeButton, TypeButton, ExtraTypeButton };
+declare type TEstimatedPerson = {
+    personId: string;
+    firstName: string;
+    lastName: string;
+    positionFullName: string;
+    positionFuncBlock: string;
+    unitFullName?: string;
+    photo: string;
+};
+export { IBoxProps, FontPropType, SizeModal, SizeButton, TypeButton, ExtraTypeButton, TEstimatedPerson, };
