@@ -17,4 +17,5 @@ import SpinnerModule from '@modules-lib/SpinnerModule';
 import CardBlock from '@modules-lib/CardBlock';
 import { FilterBlock } from '@modules-lib/Tags/FilterBlock';
 import { TagBlock } from '@modules-lib/Tags/TagBlock';
-export { BoxBlock, Button, TextBlock, Notificator, ModalPageWrapper, ModalWrapper, ScrollbarWrapper, TooltipInfo, TabWrapper, TabsContainer, AvatarBlock, AvatarStackBlock, AvatarButtonBlock, SpinnerModule, CardBlock, ColumnBlock, ContentBlock, GutterBlock, TagBlock, FilterBlock, };
+import CounterBlock from '@modules-lib/CounterBlock';
+export { BoxBlock, Button, TextBlock, Notificator, ModalPageWrapper, ModalWrapper, ScrollbarWrapper, TooltipInfo, TabWrapper, TabsContainer, AvatarBlock, AvatarStackBlock, AvatarButtonBlock, SpinnerModule, CardBlock, ColumnBlock, ContentBlock, GutterBlock, TagBlock, FilterBlock, CounterBlock, };

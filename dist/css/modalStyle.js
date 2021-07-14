@@ -22,4 +22,11 @@ export default `
 	.assessment-client-modal-page {
 		z-index: 199 !important;
 	}
+	
+	.no-modal-background {
+    background: transparent !important;
+    overflow: hidden;
+    padding: 0 !important;
+    min-width: auto !important;
+  }
 `;

@@ -19,6 +19,7 @@ import SpinnerModule from '@modules-lib/SpinnerModule';
 import CardBlock from '@modules-lib/CardBlock';
 import { FilterBlock } from '@modules-lib/Tags/FilterBlock';
 import { TagBlock } from '@modules-lib/Tags/TagBlock';
+import CounterBlock from '@modules-lib/CounterBlock';
 
 export {
   BoxBlock,
@@ -41,4 +42,5 @@ export {
   GutterBlock,
   TagBlock,
   FilterBlock,
+  CounterBlock,
 };
