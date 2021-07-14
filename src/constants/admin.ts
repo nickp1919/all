@@ -61,20 +61,21 @@ export const ASSIGNMENTS = {
   ROUTE_360: 'assessment360-group',
   ROUTE_COLLECTION: 'assignments',
   ROUTE_COLLECTION_360: 'assessment360-groups',
-  BUTTONS: [
-    {
+  BUTTONS: {
+    info: {
       name: 'основное',
       url: 'info',
     },
-    {
-      name: 'сеансы',
-      url: 'sessions',
+    participants: {
+      name: 'участники',
+      url: 'participants',
+      count: 0,
     },
-    {
+    reports: {
       name: 'отчетность',
       url: 'reports',
     },
-  ],
+  },
   BUTTONS_360: [
     {
       name: 'основное',

@@ -77,9 +77,20 @@ export declare const ASSIGNMENTS: {
     ROUTE_COLLECTION: string;
     ROUTE_COLLECTION_360: string;
     BUTTONS: {
-        name: string;
-        url: string;
-    }[];
+        info: {
+            name: string;
+            url: string;
+        };
+        participants: {
+            name: string;
+            url: string;
+            count: number;
+        };
+        reports: {
+            name: string;
+            url: string;
+        };
+    };
     BUTTONS_360: {
         name: string;
         url: string;
