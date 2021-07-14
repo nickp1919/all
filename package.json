@@ -19,13 +19,13 @@
     "lint-staged": "lint-staged",
     "start": "run-s watch"
   },
-  "repository": "https://github.com/assessment-hrplatform/utils",
+  "repository": "https://github.com/assessment-hrplatform/all",
   "author": "ridrifews",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/assessment-hrplatform/utils/issues"
+    "url": "https://github.com/assessment-hrplatform/all/issues"
   },
-  "homepage": "https://github.com/assessment-hrplatform/utils#readme",
+  "homepage": "https://github.com/assessment-hrplatform/all#readme",
   "dependencies": {
     "@hrplatform/utils": "^2.2.1",
     "@pulse/colors": "^3.2.1",
