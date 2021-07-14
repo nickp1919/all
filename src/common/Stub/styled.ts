@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 import css from '@styled-system/css';
 
 import { BoxBlock, TextBlock } from '@modules-lib';

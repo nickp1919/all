@@ -5,7 +5,6 @@ import { getBgColorTag } from '@utils-lib';
 import { ColorType, State } from './types';
 import { FilterStyled } from './styled';
 
-
 const FilterBlock = React.forwardRef<
   HTMLAnchorElement,
   {

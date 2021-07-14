@@ -1,9 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import cn from 'classnames';
 import { POPUP_DIRECTION } from "../../constants";
 import { EventRegistration } from "../../utils";
-import { TransitionBLock } from "../Animation/Transition/Transition";
 const traceBubblingByClass = (event, classNames) => {
     // TODO: any
     // composedPath() отсутствует в flow type Event,
@@ -32,8 +30,6 @@ const traceBubblingByClass = (event, classNames) => {
     return false;
 };
 const eventRegistrator = new EventRegistration(50);
-const ID_POPUP_CONTAINER = 'contentPopupPortal';
-// export const PortalPopupContainer = () => <div id={ID_POPUP_CONTAINER} />;
 export const Trigger = ({ trigger, children, className, width, getTriggerRef }) => {
     const $trigger = React.useRef(null);
     React.useEffect(() => {
@@ -51,36 +47,6 @@ export const PopupContent = ({ popupContent, className, width, children, getPopu
         }
     }, []);
     return (React.createElement("div", { className: cn(className, popupContent && popupContent.className), ref: $popupContentRef, style: { width } }, children));
-};
-export const PortalPopupContent = ({ popupContent, className, width, children, triggerRef, portalContainerClass, portalRef = `#${ID_POPUP_CONTAINER}`, show, position, }) => {
-    const node = document.querySelector(portalRef);
-    const [container, setContainer] = React.useState(null);
-    if (!node)
-        return;
-    let triggerPosition;
-    if (triggerRef && container) {
-        triggerPosition = {
-            x: triggerRef.getBoundingClientRect().x,
-            y: triggerRef.getBoundingClientRect().y,
-        };
-    }
-    if (show) {
-        let offsetLeft = 0;
-        if (position === 'bottomLeft') {
-            offsetLeft = node.clientWidth;
-        }
-        node.setAttribute('style', `
-            left: ${triggerPosition ? `${triggerPosition.x - offsetLeft}px` : 0};
-            top: ${triggerPosition ? `${triggerPosition.y}px` : 0};
-            position: absolute;
-            z-index: 1000;
-        `);
-    }
-    return (show &&
-        ReactDOM.createPortal(React.createElement(TransitionBLock, null,
-            React.createElement("div", { className: `popupPortal ${portalContainerClass}` },
-                React.createElement("div", { className: cn(className, popupContent && popupContent.className), style: { width }, ref: ($ref) => setContainer($ref) },
-                    React.createElement("div", { className: "popup-contentWrapper" }, children)))), node));
 };
 export default class Popup extends React.Component {
     constructor(props) {
@@ -226,7 +192,6 @@ export default class Popup extends React.Component {
             className: cn('popup-content', { 'popup-content-isRegulating': !isMount }),
         };
         return (React.createElement("div", { className: classList }, React.Children.toArray(children).map((child) => {
-            // TODO: any
             let element = null;
             if (child.type === Trigger) {
                 element = React.cloneElement(child, {
@@ -236,16 +201,6 @@ export default class Popup extends React.Component {
             }
             if (child.type === PopupContent) {
                 element = React.cloneElement(child, { popupContent, getPopupContentRef });
-            }
-            if (child.type === PortalPopupContent) {
-                element = React.cloneElement(child, {
-                    show: trigger,
-                    triggerRef: this.$trigger,
-                    getPopupContentRef,
-                    portalContainerClass: classList,
-                    popupContent,
-                    position,
-                });
             }
             return element;
         })));

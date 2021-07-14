@@ -17,14 +17,6 @@ declare type PopupContentProps = {
     getPopupContentRef?: Function;
 };
 export declare const PopupContent: ({ popupContent, className, width, children, getPopupContentRef, }: PopupContentProps) => JSX.Element;
-declare type PortalPopupContentType = PopupContentProps & {
-    triggerRef?: HTMLElement;
-    portalContainerClass?: string;
-    portalRef?: string;
-    show?: boolean;
-    position?: string;
-};
-export declare const PortalPopupContent: ({ popupContent, className, width, children, triggerRef, portalContainerClass, portalRef, show, position, }: PortalPopupContentType) => false | React.ReactPortal | undefined;
 declare type PopupProps = {
     className?: string;
     preventClicked?: boolean;
