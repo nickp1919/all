@@ -7,9 +7,7 @@ import ModalWrapper from '@modules-lib/ModalWrapper';
 import ScrollbarWrapper from '@modules-lib/ScrollbarWrapper';
 import TooltipInfo from '@modules-lib/TooltipInfo';
 import { TabWrapper, TabsContainer } from '@modules-lib/Tabs';
-import { AvatarBlock } from '@modules-lib/AvatarBlock';
-import AvatarStackBlock from '@modules-lib/AvatarBlock/AvatarStackBlock';
-import AvatarButtonBlock from '@modules-lib/AvatarBlock/AvatarButtonBlock';
+import { AvatarBlock, AvatarStackBlock, AvatarButtonBlock } from '@modules-lib/AvatarBlock';
 
 import GutterBlock from '@modules-lib/Layout/GutterBlock';
 import ContentBlock from '@modules-lib/Layout/ContentBlock';
@@ -21,6 +19,8 @@ import { FilterBlock } from '@modules-lib/Tags/FilterBlock';
 import { TagBlock } from '@modules-lib/Tags/TagBlock';
 import CounterBlock from '@modules-lib/CounterBlock';
 import TitleBlock from '@modules-lib/TitleBlock';
+import NotificationBlock from '@modules-lib/NotificationBlock';
+import MoreButtonBlock from '@modules-lib/MoreButtonBlock';
 
 export {
   BoxBlock,
@@ -45,4 +45,6 @@ export {
   FilterBlock,
   CounterBlock,
   TitleBlock,
+  NotificationBlock,
+  MoreButtonBlock,
 };
