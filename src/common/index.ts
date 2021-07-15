@@ -6,5 +6,4 @@ import Stub from '@common-lib/Stub';
 import DropdownMenu from '@common-lib/DropdownMenu';
 import Skeleton from '@common-lib/Skeleton';
 
-
 export { UIAdaptive, ModalOur, ErrorView, Popup, Stub, DropdownMenu, Skeleton };
