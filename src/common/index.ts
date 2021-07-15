@@ -5,6 +5,6 @@ import Popup from '@common-lib/Popup';
 import Stub from '@common-lib/Stub';
 import DropdownMenu from '@common-lib/DropdownMenu';
 import Skeleton from '@common-lib/Skeleton';
-import Subtitle from '@common-lib/Subtitle';
+import Link from '@common-lib/Link';
 
-export { UIAdaptive, ModalOur, ErrorView, Popup, Stub, DropdownMenu, Skeleton, Subtitle };
+export { UIAdaptive, ModalOur, ErrorView, Popup, Stub, DropdownMenu, Skeleton, Link };

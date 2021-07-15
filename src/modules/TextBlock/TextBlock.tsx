@@ -15,6 +15,7 @@ export const TextBlock: React.FC<IBoxProps> = React.forwardRef((props, ref) => {
     style,
     children,
     title,
+    onClick,
   } = props;
 
   return (
@@ -26,6 +27,7 @@ export const TextBlock: React.FC<IBoxProps> = React.forwardRef((props, ref) => {
       className={className}
       style={style}
       title={title}
+      onClick={onClick}
     >
       {children}
     </Text>

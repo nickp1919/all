@@ -5,5 +5,4 @@ import Popup from "./Popup";
 import Stub from "./Stub";
 import DropdownMenu from "./DropdownMenu";
 import Skeleton from "./Skeleton";
-import Subtitle from "./Subtitle";
-export { UIAdaptive, ModalOur, ErrorView, Popup, Stub, DropdownMenu, Skeleton, Subtitle };
+export { UIAdaptive, ModalOur, ErrorView, Popup, Stub, DropdownMenu, Skeleton };
