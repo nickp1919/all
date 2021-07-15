@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import css from '@styled-system/css';
-import { ReactComponent as PlusCircle } from '@assets-lib/plus-circle.svg';
+import { ReactComponent as PlusCircle } from './plus-circle.svg';
 import { colors } from "../../globalStyled";
 export const PlusCircleIconSVG = styled(PlusCircle) `
   ${css({ ml: 3 })}
