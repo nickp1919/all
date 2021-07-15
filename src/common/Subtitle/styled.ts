@@ -5,7 +5,7 @@ import { BoxBlock } from '@modules-lib';
 
 import { AlignCenter, AlignBaseline, colors } from '@globalStyled-lib';
 
-import { ReactComponent as PlusCircle } from '@assets/plus-circle.svg';
+import { ReactComponent as PlusCircle } from '@assets-lib/plus-circle.svg';
 
 export const SubtitleWrapDiv = styled(BoxBlock)`
   ${css({ mt: 8 })}
