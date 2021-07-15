@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import css from '@styled-system/css';
 import { BoxBlock } from "../../modules";
 import { AlignCenter, AlignBaseline, colors } from "../../globalStyled";
-import { ReactComponent as PlusCircle } from '@assets/plus-circle.svg';
+import { ReactComponent as PlusCircle } from '@assets-lib/plus-circle.svg';
 export const SubtitleWrapDiv = styled(BoxBlock) `
   ${css({ mt: 8 })}
   ${AlignCenter};
