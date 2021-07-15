@@ -20,6 +20,7 @@ import CardBlock from '@modules-lib/CardBlock';
 import { FilterBlock } from '@modules-lib/Tags/FilterBlock';
 import { TagBlock } from '@modules-lib/Tags/TagBlock';
 import CounterBlock from '@modules-lib/CounterBlock';
+import TitleBlock from '@modules-lib/TitleBlock';
 
 export {
   BoxBlock,
@@ -43,4 +44,5 @@ export {
   TagBlock,
   FilterBlock,
   CounterBlock,
+  TitleBlock,
 };
