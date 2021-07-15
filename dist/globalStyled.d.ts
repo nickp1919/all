@@ -1,7 +1,7 @@
-import { colors, pulseTypography } from '@typography-lib';
-import { FontPropType } from '@types-lib';
+import { colors, pulseTypography } from "./typography";
+import { FontPropType } from "./types";
 import { Size } from '@pulse/ui/components/Title/types';
-import { Flex, AlignCenter, AlignBaseline, AlignTop, JustifyTopStart, AJCenter, JustifyCenter, JSBetween, JSCenterBetween, JSEnd, WBlur, TextLink, SeparatorDiv, HiddenDiv, Grid, BorderBox, InlineBlock, Wrap, HideBlock, BodyDiv } from '@css-lib/technicalStyle';
+import { Flex, AlignCenter, AlignBaseline, AlignTop, JustifyTopStart, AJCenter, JustifyCenter, JSBetween, JSCenterBetween, JSEnd, WBlur, TextLink, SeparatorDiv, HiddenDiv, Grid, BorderBox, InlineBlock, Wrap, HideBlock, BodyDiv } from "./css/technicalStyle";
 export { colors, pulseTypography, Flex, AlignCenter, AlignBaseline, AlignTop, JustifyTopStart, AJCenter, JustifyCenter, JSBetween, JSCenterBetween, JSEnd, WBlur, TextLink, SeparatorDiv, HiddenDiv, Grid, BorderBox, InlineBlock, Wrap, HideBlock, BodyDiv, };
 export declare const BorderRadius: {
     default: {
@@ -107,8 +107,8 @@ export declare const MODAL_WIDTH: {
 };
 export declare const DividerDiv: import("styled-components").StyledComponent<"div", any, {}, never>;
 export declare const spaceTheme: number[];
-import notificationStyle from '@css-lib/notificationStyle';
-import modalStyle from '@css-lib/modalStyle';
-import tooltipStyle from '@css-lib/tooltipStyle';
-import { UIAdaptiveCol, gridCol } from '@css-lib/methods';
+import notificationStyle from "./css/notificationStyle";
+import modalStyle from "./css/modalStyle";
+import tooltipStyle from "./css/tooltipStyle";
+import { UIAdaptiveCol, gridCol } from "./css/methods";
 export { notificationStyle, modalStyle, tooltipStyle, UIAdaptiveCol, gridCol };

@@ -1,6 +1,6 @@
 import { SystemStyleObject } from '@styled-system/css';
 import { StyledComponentProps } from 'styled-components';
-import { SizeModal } from '@modules-lib/ModalPageWrapper/types';
+import { SizeModal } from "../types";
 export declare type ActionBarProps = StyledComponentProps<'div', any, {}, never>;
 export interface ActionBarStyledProps {
     $isSticky: boolean;

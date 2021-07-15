@@ -18,4 +18,5 @@ import CardBlock from "./CardBlock";
 import { FilterBlock } from "./Tags/FilterBlock";
 import { TagBlock } from "./Tags/TagBlock";
 import CounterBlock from "./CounterBlock";
-export { BoxBlock, Button, TextBlock, Notificator, ModalPageWrapper, ModalWrapper, ScrollbarWrapper, TooltipInfo, TabWrapper, TabsContainer, AvatarBlock, AvatarStackBlock, AvatarButtonBlock, SpinnerModule, CardBlock, ColumnBlock, ContentBlock, GutterBlock, TagBlock, FilterBlock, CounterBlock, };
+import TitleBlock from "./TitleBlock";
+export { BoxBlock, Button, TextBlock, Notificator, ModalPageWrapper, ModalWrapper, ScrollbarWrapper, TooltipInfo, TabWrapper, TabsContainer, AvatarBlock, AvatarStackBlock, AvatarButtonBlock, SpinnerModule, CardBlock, ColumnBlock, ContentBlock, GutterBlock, TagBlock, FilterBlock, CounterBlock, TitleBlock, };

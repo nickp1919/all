@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@components-lib": ["./components"],
+      "@components-lib/*": ["./components/*"],
+      "@typography-lib": ["./typography"],
+      "@typography-lib/*": ["./typography/*"],
+      "@types-lib": ["./types"],
+      "@types-lib/*": ["./types/*"],
+      "@modules-lib": ["./modules"],
+      "@modules-lib/*": ["./modules/*"],
+      "@utils-lib": ["./utils"],
+      "@utils-lib/*": ["./utils/*"],
+      "@containers-lib": ["./containers"],
+      "@containers-lib/*": ["./containers/*"],
+      "@common-lib": ["./common"],
+      "@common-lib/*": ["./common/*"],
+      "@assets-lib": ["./assets"],
+      "@assets-lib/*": ["./assets/*"],
+      "@decorators-lib": ["./decorators"],
+      "@decorators-lib/*": ["./decorators/*"],
+      "@modals-lib": ["./modals"],
+      "@modals-lib/*": ["./modals/*"],
+      "@css-lib": ["./css"],
+      "@css-lib/*": ["./css/*"],
+      "@globalStyled-lib": ["./globalStyled.ts"],
+      "@constants-lib": ["./constants"]
+    },
+    "plugins": [
+      { "transform": "typescript-transform-paths" },
+      { "transform": "@zerollup/ts-transform-paths" },
+    ]
+  }
+}

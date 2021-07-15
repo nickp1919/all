@@ -1,4 +1,4 @@
-import { TEstimatedPerson } from '@types-lib';
+import { TEstimatedPerson } from "../../types";
 export declare type TUserCardProps = {
     person: TEstimatedPerson;
     short?: boolean;

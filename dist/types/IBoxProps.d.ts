@@ -7,6 +7,7 @@ interface IBaseProps extends React.RefAttributes<any> {
     as?: React.ElementType;
     css?: CSSObject | FlattenSimpleInterpolation | string;
     theme?: Theme;
+    onClick?: Function;
 }
 /**
  * The `SxStyleProp` extension `SystemStyleObject`

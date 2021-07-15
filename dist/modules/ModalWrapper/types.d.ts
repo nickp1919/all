@@ -1,5 +1,5 @@
 import { ReactNode, SyntheticEvent } from 'react';
-import { KeyEvent } from '@common-lib/ModalOur/types';
+import { KeyEvent } from "../../common/ModalOur/types";
 export declare type ModalWrapperProps = {
     visible?: boolean;
     className?: string;

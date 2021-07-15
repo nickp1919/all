@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-import { TextBlock } from '@modules';
+import { TextBlock } from '@modules-lib';
 
-import { COLORS, InlineBlock } from '@globalStyled';
+import { colors, InlineBlock } from '@globalStyled-lib';
 
 export const LinkWrapDiv = styled(TextBlock)`
   ${InlineBlock}
-  color: ${COLORS.textAction};
+  color: ${colors.textAction};
   cursor: pointer;
 `;
