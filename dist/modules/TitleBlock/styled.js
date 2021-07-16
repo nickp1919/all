@@ -3,7 +3,7 @@ import css from '@styled-system/css';
 import { ReactComponent as PlusCircle } from "../../assets/plus-circle.svg";
 import { colors } from "../../globalStyled";
 export const PlusCircleIconSVG = styled(PlusCircle) `
-  ${css({ ml: 3 })}
+  ${css({ ml: 1 })}
   display: block;
   ${({ iconsize }) => iconsize}
   fill: ${colors.textAction};

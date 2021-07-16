@@ -2,8 +2,12 @@ import React from 'react';
 
 import { Spinner, SpinnerProps } from '@pulse/ui/components/Spinner';
 
-const SpinnerModule = (props: SpinnerProps) => {
-  return <Spinner {...props} />;
-};
+import { SpinnerWrapper } from './styled';
 
-export default SpinnerModule;
+export const SpinnerModule = (props: SpinnerProps) => {
+  return (
+    <SpinnerWrapper>
+      <Spinner {...props} />
+    </SpinnerWrapper>
+  );
+};

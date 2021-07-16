@@ -1,3 +1,3 @@
-import SpinnerModule from './SpinnerModule';
+import { SpinnerModule } from './SpinnerModule';
 
 export default SpinnerModule;

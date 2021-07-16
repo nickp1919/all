@@ -1,2 +1,2 @@
-export declare const SpinnerStyled: import("styled-components").StyledComponent<"div", any, {}, never>;
-export declare const LoadingText: import("styled-components").StyledComponent<"span", any, {}, never>;
+/// <reference types="react" />
+export declare const SpinnerWrapper: import("styled-components").StyledComponent<import("react").ForwardRefExoticComponent<Pick<any, string | number | symbol> & import("react").RefAttributes<HTMLDivElement>>, any, {}, never>;
