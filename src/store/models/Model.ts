@@ -46,7 +46,7 @@ import {
   isArrayCount,
   isObject,
   isArray,
-} from '@utils-lib';
+} from '@utils';
 
 type TPropObject = {
   [key: string]: any;

@@ -16,7 +16,7 @@ export const BUTTON_EXTRA_TYPE = {
 export const BUTTON_PULSE_TYPE = {
     secondary: 'secondary',
     tertiary: 'tertiary',
-    undefined: undefined,
+    primary: 'primary',
 };
 export const BUTTON_SIZE = {
     s: 's',

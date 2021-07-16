@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { isArrayCount } from '@utils-lib';
+import { isArrayCount } from '@utils';
 
 import { DefaultWrapperDiv, SpaceBetweenWrapperDiv } from './styled';
 

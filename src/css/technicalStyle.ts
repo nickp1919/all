@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import css from '@styled-system/css';
 
-import { colors } from '@typography-lib';
+import { colors } from '@typography';
 
 export const Flex = `
   display: flex;

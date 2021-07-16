@@ -1,9 +1,9 @@
 import React, { FC, useEffect } from 'react';
 import classNames from 'classnames';
 
-import { NO_OVERFLOW_CLASS } from '@constants-lib';
+import { NO_OVERFLOW_CLASS } from '@constants';
 
-import { ModalOur } from '@common-lib';
+import { ModalOur } from '@common';
 
 import { ModalWrapperProps } from './types';
 

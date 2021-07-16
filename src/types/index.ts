@@ -1,6 +1,6 @@
 import { IBoxProps } from './IBoxProps';
 
-import { SizeButton, TypeButton, ExtraTypeButton } from './button';
+import { ExtraTypeButton } from './button';
 
 type FontPropType = {
   default: {
@@ -15,8 +15,6 @@ type FontPropType = {
   };
 };
 
-type SizeModal = 's' | 'm' | 'l';
-
 type TEstimatedPerson = {
   personId: string;
   firstName: string;
@@ -27,12 +25,4 @@ type TEstimatedPerson = {
   photo: string;
 };
 
-export {
-  IBoxProps,
-  FontPropType,
-  SizeModal,
-  SizeButton,
-  TypeButton,
-  ExtraTypeButton,
-  TEstimatedPerson,
-};
+export { IBoxProps, FontPropType, ExtraTypeButton, TEstimatedPerson };

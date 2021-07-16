@@ -1,10 +1,10 @@
 import React, { useCallback } from 'react';
 
-import { getShortName } from '@utils-lib';
+import { getShortName } from '@utils';
 
-import { AvatarBlock, TextBlock } from '@modules-lib';
+import { AvatarBlock, TextBlock } from '@modules';
 
-import { FONT_VARIANTS } from '@globalStyled-lib';
+import { FONT_VARIANTS } from '@globalStyled';
 
 import {
   UserCardWrapDiv,

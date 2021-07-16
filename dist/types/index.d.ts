@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { IBoxProps } from './IBoxProps';
-import { SizeButton, TypeButton, ExtraTypeButton } from './button';
+import { ExtraTypeButton } from './button';
 declare type FontPropType = {
     default: {
         fontFamily: string;
@@ -13,7 +13,6 @@ declare type FontPropType = {
         fontWeight: string;
     };
 };
-declare type SizeModal = 's' | 'm' | 'l';
 declare type TEstimatedPerson = {
     personId: string;
     firstName: string;
@@ -23,4 +22,4 @@ declare type TEstimatedPerson = {
     unitFullName?: string;
     photo: string;
 };
-export { IBoxProps, FontPropType, SizeModal, SizeButton, TypeButton, ExtraTypeButton, TEstimatedPerson, };
+export { IBoxProps, FontPropType, ExtraTypeButton, TEstimatedPerson };

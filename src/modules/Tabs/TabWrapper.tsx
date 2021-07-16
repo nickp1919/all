@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { StyledTab } from './styles';
+import { TabCounter } from '@pulse/ui/components/Tabs';
 
 const TabWrapper = React.forwardRef<
   HTMLDivElement,
@@ -11,8 +12,9 @@ const TabWrapper = React.forwardRef<
     isActive?: boolean;
     badge?: boolean;
     children: React.ReactNode;
+    count?: number | null;
   }
->(({ disabled, onClick, children, isActive, badge, ...props }, ref) => {
+>(({ disabled, onClick, children, isActive, badge, count, ...props }, ref) => {
   return (
     <StyledTab
       onClick={onClick}
@@ -23,6 +25,7 @@ const TabWrapper = React.forwardRef<
       disabled={disabled}
     >
       {children}
+      {count && <TabCounter>{count}</TabCounter>}
     </StyledTab>
   );
 });

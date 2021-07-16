@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { TextBlock } from '@modules-lib';
+import { TextBlock } from '@modules';
 
-import { FONT_VARIANTS } from '@globalStyled-lib';
+import { FONT_VARIANTS } from '@globalStyled';
 
 import { StubWrapDiv, StubContentDiv, StubTextBlock } from './styled';
 import { TStubProps } from './types';

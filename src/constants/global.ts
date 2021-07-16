@@ -1,4 +1,7 @@
-import { FontPropType, SizeButton, TypeButton, ExtraTypeButton, SizeModal } from '@types-lib';
+import { FontPropType, ExtraTypeButton } from '@types';
+
+import { Size as SizeButton, Type as TypeButton } from '@pulse/ui/components/Button/types';
+import { Size as SizeModal } from '@pulse/ui/components/Modal/types';
 
 export const API = {
   http: '/api-web/assessment/',
@@ -22,7 +25,7 @@ export const BUTTON_EXTRA_TYPE: { [key: string]: ExtraTypeButton } = {
 export const BUTTON_PULSE_TYPE: { [key: string]: TypeButton } = {
   secondary: 'secondary',
   tertiary: 'tertiary',
-  undefined: undefined,
+  primary: 'primary',
 };
 
 export const BUTTON_SIZE: { [key: string]: SizeButton } = {

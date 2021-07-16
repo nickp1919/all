@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { getBgColorTag } from '@utils-lib';
+import { getBgColorTag } from '@utils';
 
 import { TagStyled } from './styled';
 import { Size } from './types';

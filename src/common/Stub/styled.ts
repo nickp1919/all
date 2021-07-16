@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import css from '@styled-system/css';
 
-import { BoxBlock, TextBlock } from '@modules-lib';
+import { BoxBlock, TextBlock } from '@modules';
 
-import { AJCenter, colors } from '@globalStyled-lib';
-import { IBoxProps } from '@types-lib';
+import { AJCenter, colors } from '@globalStyled';
+import { IBoxProps } from '@types';
 
 export const StubWrapDiv = styled(BoxBlock)`
   ${AJCenter}

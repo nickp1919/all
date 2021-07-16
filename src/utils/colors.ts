@@ -1,7 +1,7 @@
-import { isArrayCount, isString } from '@utils-lib';
-import { colors } from '@globalStyled-lib';
+import { isArrayCount, isString } from '@utils';
+import { colors } from '@globalStyled';
 
-export function hexToRgba<T>(hexCode: T, opacity = 100) {
+export function hexToRgba(hexCode: string, opacity = 100) {
   if (!isString(hexCode)) {
     return '';
   }

@@ -1,6 +1,6 @@
 import Axios from 'axios';
 
-import { Notificator } from '@modules-lib';
+import { Notificator } from '@modules';
 
 export default function downloadFile({
   fetchUrl,

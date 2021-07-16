@@ -1,4 +1,4 @@
-import { isString } from '@utils-lib';
+import { isString } from '@utils';
 
 const getInitialsUser = (firstName: string, lastName: string) => {
   const initialsUser = `${isString(firstName) && firstName[0]}${isString(lastName) && lastName[0]}`;

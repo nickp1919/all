@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import css from '@styled-system/css';
 
-import { BoxBlock } from '@modules-lib';
-import { AlignCenter, colors, JustifyCenter } from '@globalStyled-lib';
+import { BoxBlock } from '@modules';
+import { AlignCenter, colors, JustifyCenter } from '@globalStyled';
 
 export const DropdownMenuWrapDiv = styled(BoxBlock)`
   position: relative;

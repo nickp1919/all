@@ -5,11 +5,11 @@ import { Size } from '@pulse/ui/components/Title/types';
 
 import ActionBlock from './ActionBlock/ActionBlock';
 
-import { IconsSizes, TITLE_SIZE } from '@globalStyled-lib';
+import { IconsSizes, TITLE_SIZE } from '@globalStyled';
 
 import { PlusCircleIconSVG } from './styled';
 
-const TitleBlock = React.forwardRef<
+export const TitleBlock = React.forwardRef<
   HTMLDivElement,
   {
     onClick?: () => void;
@@ -44,5 +44,3 @@ const TitleBlock = React.forwardRef<
     </Title>
   );
 });
-
-export default TitleBlock;

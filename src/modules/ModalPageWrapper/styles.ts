@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import css from '@styled-system/css';
 
-import { BoxBlock } from '@modules-lib';
-import { JSBetween, JSEnd } from '@globalStyled-lib';
+import { BoxBlock } from '@modules';
+import { JSBetween, JSEnd } from '@globalStyled';
 
 export const ModalPageWrapperHeaderDiv = styled(BoxBlock)`
   ${JSBetween}

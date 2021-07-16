@@ -1,5 +1,5 @@
-import { isArrayCount, isObject, isSetField } from '@utils-lib';
-import { SORTING } from '@constants-lib';
+import { isArrayCount, isObject, isSetField } from '@utils';
+import { SORTING } from '@constants';
 
 function sortingDirection(a: number | string, b: number | string, variant?: string) {
   if (variant === SORTING.reverse) {

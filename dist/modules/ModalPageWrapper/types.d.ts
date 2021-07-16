@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
-export declare type SizeModal = 's' | 'm' | 'l';
+import { Size } from '@pulse/ui/components/Modal/types';
 export declare type ModalWrapperProps = {
     actionBar?: ReactNode;
     onClose: () => void;
     children: ReactNode;
     windowLevel?: number;
-    size?: SizeModal;
+    size?: Size;
     header?: ReactNode;
 };

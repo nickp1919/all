@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { PureComponent } from 'react';
 
-import { BoxBlock, SpinnerModule } from '@modules-lib';
+import { BoxBlock, SpinnerModule } from '@modules';
 
 import { ISkeletonProps } from './types';
 

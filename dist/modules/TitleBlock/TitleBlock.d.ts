@@ -1,6 +1,6 @@
 import React from 'react';
 import { Size } from '@pulse/ui/components/Title/types';
-declare const TitleBlock: React.ForwardRefExoticComponent<{
+export declare const TitleBlock: React.ForwardRefExoticComponent<{
     onClick?: (() => void) | undefined;
     size?: Size | undefined;
     isActive?: boolean | undefined;
@@ -13,4 +13,3 @@ declare const TitleBlock: React.ForwardRefExoticComponent<{
         height: number;
     } | undefined;
 } & React.RefAttributes<HTMLDivElement>>;
-export default TitleBlock;

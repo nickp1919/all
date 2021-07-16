@@ -31,7 +31,7 @@ export const breakpoints = {
 // автоматически обнуляется отступ у крайнего элемента в строке
 import styled, { css } from 'styled-components';
 import isEmpty from 'lodash.isempty';
-import BoxBlock from "../../modules/BoxBlock";
+import { BoxBlock } from "../../modules";
 import { RESOLUTION, SORTING, INDENTS } from "../../constants";
 import { AlignTop, Wrap, JSBetween, HideBlock } from "../../globalStyled";
 import { isArrayCount, sorting, arrayMaxField } from "../../utils";

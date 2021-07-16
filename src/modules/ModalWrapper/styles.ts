@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import css from '@styled-system/css';
 
-import { BoxBlock } from '@modules-lib';
+import { BoxBlock } from '@modules';
 
-import { JSEnd } from '@globalStyled-lib';
+import { JSEnd } from '@globalStyled';
 
 export const ModalBlockWrapperDiv = styled(BoxBlock)``;
 export const ModalButtonsWrapperDiv = styled(BoxBlock)`

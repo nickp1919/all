@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { TEstimatedPerson } from '@types-lib';
+import { TEstimatedPerson } from '@types';
 
 export declare type Style = 'default' | 'black';
 

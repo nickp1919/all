@@ -1,4 +1,4 @@
-import { isArrayCount } from '@utils-lib';
+import { isArrayCount } from '@utils';
 
 const arrayMaxField = (arr: any, field?: string) => {
   if (!isArrayCount(arr)) {

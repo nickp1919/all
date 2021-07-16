@@ -1,4 +1,4 @@
-import { API } from '@constants-lib';
+import { API } from '@constants';
 
 function downloadByUrl({ name, link }: { name: string; link: string }) {
   const a = document.createElement('a');

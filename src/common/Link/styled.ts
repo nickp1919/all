@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { TextBlock } from '@modules-lib';
+import { TextBlock } from '@modules';
 
-import { colors, InlineBlock } from '@globalStyled-lib';
+import { colors, InlineBlock } from '@globalStyled';
 
 export const LinkWrapDiv = styled(TextBlock)`
   ${InlineBlock}

@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import css from '@styled-system/css';
 import { ReactComponent as CloseSvg } from './icon/close.svg';
 
-import { BoxBlock } from '@modules-lib';
+import { BoxBlock } from '@modules';
 
-import { AJCenter, BorderRadius, BoxShadow, colors, JSBetween } from '@globalStyled-lib';
+import { AJCenter, BorderRadius, BoxShadow, colors, JSBetween } from '@globalStyled';
 
 export const ModalWrapperDiv = styled(BoxBlock)`
   z-index: 2;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import css from '@styled-system/css';
 
-import { colors } from '@globalStyled-lib';
+import { colors } from '@globalStyled';
 
 export const PopupWrapList = styled.ul`
   position: absolute;

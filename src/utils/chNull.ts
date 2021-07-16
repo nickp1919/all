@@ -1,4 +1,4 @@
-import { isNull, isUndefined } from '@utils-lib';
+import { isNull, isUndefined } from '@utils';
 
 export const chNull = <T>(field: T, extra?: string | number) => {
   if (!isUndefined(extra)) {

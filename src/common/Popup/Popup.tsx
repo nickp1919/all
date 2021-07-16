@@ -1,9 +1,9 @@
 import React, { ReactElement, ReactNode, RefObject } from 'react';
 import cn from 'classnames';
 
-import { POPUP_DIRECTION } from '@constants-lib';
+import { POPUP_DIRECTION } from '@constants';
 
-import { EventRegistration } from '@utils-lib';
+import { EventRegistration } from '@utils';
 
 const traceBubblingByClass = (event: any, classNames: string | string[]) => {
   // TODO: any

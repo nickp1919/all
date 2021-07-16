@@ -1,12 +1,12 @@
 import { SystemStyleObject } from '@styled-system/css';
 import { StyledComponentProps } from 'styled-components';
-import { SizeModal } from '@modules-lib/ModalPageWrapper/types';
+import { Size } from '@pulse/ui/components/Modal/types';
 
 export type ActionBarProps = StyledComponentProps<'div', any, {}, never>;
 
 export interface ActionBarStyledProps {
   $isSticky: boolean;
-  $size?: SizeModal;
+  $size?: Size;
 }
 
-export type ActionBarSizes = Record<SizeModal, SystemStyleObject>;
+export type ActionBarSizes = Record<Size, SystemStyleObject>;

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { colors, pulseTypography } from '@typography-lib';
+import { colors, pulseTypography } from '@typography';
 
-import { FontPropType } from '@types-lib';
+import { FontPropType } from '@types';
 import { Size } from '@pulse/ui/components/Title/types';
 
 import {
@@ -26,7 +26,7 @@ import {
   Wrap,
   HideBlock,
   BodyDiv,
-} from '@css-lib/technicalStyle';
+} from '@css/technicalStyle';
 
 export {
   colors,
@@ -200,9 +200,9 @@ export const spaceTheme = [
   0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84,
 ];
 
-import notificationStyle from '@css-lib/notificationStyle';
-import modalStyle from '@css-lib/modalStyle';
-import tooltipStyle from '@css-lib/tooltipStyle';
-import { UIAdaptiveCol, gridCol } from '@css-lib/methods';
+import notificationStyle from '@css/notificationStyle';
+import modalStyle from '@css/modalStyle';
+import tooltipStyle from '@css/tooltipStyle';
+import { UIAdaptiveCol, gridCol } from '@css/methods';
 
 export { notificationStyle, modalStyle, tooltipStyle, UIAdaptiveCol, gridCol };

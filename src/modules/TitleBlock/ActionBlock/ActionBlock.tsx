@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Action } from '@pulse/ui/components/Title/Action';
 
-import { TITLE_SIZE } from '@globalStyled-lib';
+import { TITLE_SIZE } from '@globalStyled';
 
 import { ActionBlockProps } from './types';
 

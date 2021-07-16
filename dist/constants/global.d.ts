@@ -1,4 +1,6 @@
-import { FontPropType, SizeButton, TypeButton, ExtraTypeButton, SizeModal } from "../types";
+import { FontPropType, ExtraTypeButton } from "../types";
+import { Size as SizeButton, Type as TypeButton } from '@pulse/ui/components/Button/types';
+import { Size as SizeModal } from '@pulse/ui/components/Modal/types';
 export declare const API: {
     http: string;
     img: string;

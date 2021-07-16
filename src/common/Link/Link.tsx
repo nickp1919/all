@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FONT_VARIANTS } from '@globalStyled-lib';
+import { FONT_VARIANTS } from '@globalStyled';
 const { body1Regular } = FONT_VARIANTS;
 
 import { LinkWrapDiv } from './styled';

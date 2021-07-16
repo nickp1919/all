@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import css from '@styled-system/css';
 
-import { BoxBlock } from '@modules-lib';
+import { BoxBlock } from '@modules';
 
-import { AlignCenter, colors } from '@globalStyled-lib';
+import { AlignCenter, colors } from '@globalStyled';
 
 export const TooltipWrapperDiv = styled(BoxBlock)<{ width: string }>`
   max-width: ${({ width }) => width};

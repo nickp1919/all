@@ -1,4 +1,4 @@
-import { colors } from '@typography-lib';
+import { colors } from '@typography';
 
 export default `
 	.rc-tooltip.rc-tooltip-zoom-appear,

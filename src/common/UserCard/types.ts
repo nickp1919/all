@@ -1,4 +1,4 @@
-import { TEstimatedPerson } from '@types-lib';
+import { TEstimatedPerson } from '@types';
 
 export type TUserCardProps = {
   person: TEstimatedPerson;

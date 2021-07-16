@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import Scrollbar from 'react-custom-scrollbars';
 
-import { BoxBlock } from '@modules-lib';
+import { BoxBlock } from '@modules';
 
-import { isNumber } from '@utils-lib';
+import { isNumber } from '@utils';
 
 export const ScrollbarIosWrap = styled(BoxBlock)<{ height: string | number }>`
   height: ${({ height }) =>

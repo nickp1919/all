@@ -1,4 +1,4 @@
-import { declOfNum } from '@utils-lib';
+import { declOfNum } from '@utils';
 
 const timeHoursFormat = (time: number, isShort = false) => {
   let result = '';

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import classNames from 'classnames';
 
-import { NO_OVERFLOW_CLASS } from '@constants-lib';
+import { NO_OVERFLOW_CLASS } from '@constants';
 
 import { Modal } from '@pulse/ui/components/Modal';
 

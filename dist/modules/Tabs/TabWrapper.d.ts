@@ -6,5 +6,6 @@ declare const TabWrapper: React.ForwardRefExoticComponent<{
     isActive?: boolean | undefined;
     badge?: boolean | undefined;
     children: React.ReactNode;
+    count?: number | null | undefined;
 } & React.RefAttributes<HTMLDivElement>>;
 export default TabWrapper;

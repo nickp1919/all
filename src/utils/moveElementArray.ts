@@ -1,4 +1,4 @@
-import { isArrayCount } from '@utils-lib';
+import { isArrayCount } from '@utils';
 
 function moveElementArray(arr: any, from: number, to: number) {
   if (isArrayCount(arr)) {
