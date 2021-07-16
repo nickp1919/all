@@ -8,7 +8,7 @@ import { colors } from '@globalStyled';
 export const PlusCircleIconSVG = styled(PlusCircle)<{
   iconsize: { width: number; height: number };
 }>`
-  ${css({ ml: 3 })}
+  ${css({ ml: 1 })}
   display: block;
   ${({ iconsize }) => iconsize}
   fill: ${colors.textAction};
