@@ -7,5 +7,17 @@ import DropdownMenu from './DropdownMenu';
 import Skeleton from './Skeleton';
 import Link from './Link';
 import HiddenView from './HiddenView';
+import UserCard from './UserCard';
 
-export { UIAdaptive, ModalOur, ErrorView, Popup, Stub, DropdownMenu, Skeleton, Link, HiddenView };
+export {
+  UIAdaptive,
+  ModalOur,
+  ErrorView,
+  Popup,
+  Stub,
+  DropdownMenu,
+  Skeleton,
+  Link,
+  HiddenView,
+  UserCard,
+};
