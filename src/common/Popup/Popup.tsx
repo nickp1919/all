@@ -131,7 +131,7 @@ type PopupState = {
   };
 };
 
-export default class Popup extends React.Component<PopupProps, PopupState> {
+export class Popup extends React.Component<PopupProps, PopupState> {
   state: PopupState = {
     trigger: false,
     isMount: false,
