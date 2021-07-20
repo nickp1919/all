@@ -18,6 +18,7 @@ import {
   INDENTS,
   HTTP_SEARCH_USERS,
   FontType,
+  BIG_MODAL,
 } from './global';
 
 import {
@@ -96,4 +97,5 @@ export {
   ASSESSMENET_360_USER_TYPES,
   ESTIMATOR_STATUSES,
   FontType,
+  BIG_MODAL,
 };

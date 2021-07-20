@@ -1,7 +1,9 @@
 /// <reference types="react" />
 import { IBoxProps } from './IBoxProps';
 import { ExtraTypeButton } from './button';
-declare type FontPropType = {
+import { TEstimatedPerson, TEstimator, TPersonSendType, TFilteredEstimators, TGlobalSearchEstimators, TEstimatorsSendType } from './assessment360';
+export { IBoxProps, ExtraTypeButton, TEstimatedPerson, TGlobalSearchEstimators, TPersonSendType, TEstimator, TFilteredEstimators, TEstimatorsSendType, };
+export declare type FontPropType = {
     default: {
         fontFamily: string;
         variant: string;
@@ -13,13 +15,13 @@ declare type FontPropType = {
         fontWeight: string;
     };
 };
-declare type TEstimatedPerson = {
-    personId: string;
-    firstName: string;
-    lastName: string;
-    positionFullName: string;
-    positionFuncBlock: string;
-    unitFullName?: string;
-    photo: string;
+export declare type TMessages = string[];
+export declare type Dictionary<T> = {
+    [key: string]: T;
 };
-export { IBoxProps, FontPropType, ExtraTypeButton, TEstimatedPerson };
+export declare type TFile = {
+    id: string;
+    createTime: string;
+    link: string;
+    name: string;
+};

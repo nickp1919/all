@@ -15,5 +15,9 @@ export type TabsUrlPropsType = {
   count?: number;
   children?: any;
   newLocation?: string;
-  NAVIGATE: { mainUrl: string };
+  NAVIGATE: {
+    baseUrl: string;
+    mainUrl: string;
+    platformUrl: string;
+  };
 };

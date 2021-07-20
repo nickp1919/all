@@ -15,6 +15,8 @@ export declare type TabsUrlPropsType = {
     children?: any;
     newLocation?: string;
     NAVIGATE: {
+        baseUrl: string;
         mainUrl: string;
+        platformUrl: string;
     };
 };

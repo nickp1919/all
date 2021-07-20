@@ -250,3 +250,6 @@ export declare const INDENTS: {
     default: string;
 };
 export declare const FontType: FontPropType;
+export declare const BIG_MODAL: {
+    height: string;
+};

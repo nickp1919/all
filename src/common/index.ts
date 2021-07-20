@@ -9,6 +9,18 @@ import Link from './Link';
 import HiddenView from './HiddenView';
 import UserCard from './UserCard';
 
+import {
+  Form,
+  TextArea,
+  CheckBox,
+  Input,
+  Radio,
+  Label,
+  RadioText,
+  RadioImg,
+  CheckBoxImg,
+} from './Form';
+
 export {
   UIAdaptive,
   ModalOur,
@@ -20,4 +32,13 @@ export {
   Link,
   HiddenView,
   UserCard,
+  Form,
+  TextArea,
+  CheckBox,
+  Input,
+  Radio,
+  Label,
+  RadioText,
+  RadioImg,
+  CheckBoxImg,
 };

@@ -1,8 +1,27 @@
 import { IBoxProps } from './IBoxProps';
-
 import { ExtraTypeButton } from './button';
 
-type FontPropType = {
+import {
+  TEstimatedPerson,
+  TEstimator,
+  TPersonSendType,
+  TFilteredEstimators,
+  TGlobalSearchEstimators,
+  TEstimatorsSendType,
+} from './assessment360';
+
+export {
+  IBoxProps,
+  ExtraTypeButton,
+  TEstimatedPerson,
+  TGlobalSearchEstimators,
+  TPersonSendType,
+  TEstimator,
+  TFilteredEstimators,
+  TEstimatorsSendType,
+};
+
+export type FontPropType = {
   default: {
     fontFamily: string;
     variant: string;
@@ -15,14 +34,15 @@ type FontPropType = {
   };
 };
 
-type TEstimatedPerson = {
-  personId: string;
-  firstName: string;
-  lastName: string;
-  positionFullName: string;
-  positionFuncBlock: string;
-  unitFullName?: string;
-  photo: string;
+export type TMessages = string[];
+
+export type Dictionary<T> = {
+  [key: string]: T;
 };
 
-export { IBoxProps, FontPropType, ExtraTypeButton, TEstimatedPerson };
+export type TFile = {
+  id: string;
+  createTime: string;
+  link: string;
+  name: string;
+};

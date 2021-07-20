@@ -336,3 +336,7 @@ export const FontType: FontPropType = {
     fontWeight: 'font-weight: bold;',
   },
 };
+
+export const BIG_MODAL = {
+  height: '90vh',
+};
