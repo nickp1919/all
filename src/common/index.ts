@@ -1,7 +1,7 @@
 import UIAdaptive from './UIAdaptive';
 import ModalOur from './ModalOur';
 import ErrorView from './ErrorView';
-import Popup from './Popup';
+import { Popup, PopupContent, Trigger } from './Popup';
 import Stub from './Stub';
 import DropdownMenu from './DropdownMenu';
 import Skeleton from './Skeleton';
@@ -20,4 +20,6 @@ export {
   Link,
   HiddenView,
   UserCard,
+  PopupContent,
+  Trigger,
 };

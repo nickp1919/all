@@ -40,7 +40,7 @@ declare type PopupState = {
         centered: boolean;
     };
 };
-export default class Popup extends React.Component<PopupProps, PopupState> {
+export declare class Popup extends React.Component<PopupProps, PopupState> {
     state: PopupState;
     $trigger: any;
     $popupContent: any;

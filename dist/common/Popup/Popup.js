@@ -48,7 +48,7 @@ export const PopupContent = ({ popupContent, className, width, children, getPopu
     }, []);
     return (React.createElement("div", { className: cn(className, popupContent && popupContent.className), ref: $popupContentRef, style: { width } }, children));
 };
-export default class Popup extends React.Component {
+export class Popup extends React.Component {
     constructor(props) {
         super(props);
         this.state = {

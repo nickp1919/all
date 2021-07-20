@@ -1,3 +1,3 @@
-import Popup from './Popup';
+import { Popup, PopupContent, Trigger } from './Popup';
 
-export default Popup;
+export { Popup, PopupContent, Trigger };
