@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
+import { ScrollbarProps } from 'react-custom-scrollbars';
 //import { isChrome } from 'react-device-detect';
 
 import { ScrollbarWrap } from './styled';
@@ -8,7 +9,7 @@ export const ScrollbarWrapper = React.forwardRef(
   (
     {
       children,
-      height = 'auto', // если мы передаем цифру, то для ios добавляем высоту скролла, иначе
+      height = 'auto', // если мы передаем цифру, то для ios добавляем высоту скрола, иначе
       // выводим строку
       viewStyle = {
         position: 'absolute',
@@ -39,6 +40,9 @@ export const ScrollbarWrapper = React.forwardRef(
       },
       options = {},
       style = {},
+      extendsViewStyle = {},
+      extendsHorizontalStyle = {},
+      extendsVerticalStyle = {},
     }: ScrollbarWrapperProps,
     ref
   ) => {
@@ -59,14 +63,26 @@ export const ScrollbarWrapper = React.forwardRef(
       <ScrollbarWrap
         ref={ref}
         {...optionsData}
-        renderView={(Style: any, ...props: any) => (
-          <div {...props} style={{ ...Style, ...viewStyle }} className="view" />
+        renderView={(Style: CSSProperties, ...props: ScrollbarProps[]) => (
+          <div
+            {...props}
+            style={{ ...Style, ...viewStyle, ...extendsViewStyle }}
+            className="view"
+          />
         )}
-        renderTrackHorizontal={(Style: any, ...props: any) => (
-          <div {...props} style={{ ...Style, ...horizontalStyle }} className="track-horizontal" />
+        renderTrackHorizontal={(Style: CSSProperties, ...props: ScrollbarProps[]) => (
+          <div
+            {...props}
+            style={{ ...Style, ...horizontalStyle, ...extendsHorizontalStyle }}
+            className="track-horizontal"
+          />
         )}
-        renderTrackVertical={(Style: any, ...props: any) => (
-          <div {...props} style={{ ...Style, ...verticalStyle }} className="track-vertical" />
+        renderTrackVertical={(Style: CSSProperties, ...props: ScrollbarProps[]) => (
+          <div
+            {...props}
+            style={{ ...Style, ...verticalStyle, ...extendsVerticalStyle }}
+            className="track-vertical"
+          />
         )}
         className="assessment-scrollbar"
         style={{ ...style, height }}

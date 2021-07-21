@@ -1,7 +1,7 @@
 import React from 'react';
 //import { isChrome } from 'react-device-detect';
 import { ScrollbarWrap } from './styled';
-export const ScrollbarWrapper = React.forwardRef(({ children, height = 'auto', // если мы передаем цифру, то для ios добавляем высоту скролла, иначе
+export const ScrollbarWrapper = React.forwardRef(({ children, height = 'auto', // если мы передаем цифру, то для ios добавляем высоту скрола, иначе
 // выводим строку
 viewStyle = {
     position: 'absolute',
@@ -27,7 +27,7 @@ viewStyle = {
     right: 0,
     borderRadius: '3px',
     height: '100%',
-}, options = {}, style = {}, }, ref) => {
+}, options = {}, style = {}, extendsViewStyle = {}, extendsHorizontalStyle = {}, extendsVerticalStyle = {}, }, ref) => {
     const optionsData = {
         ...options,
         hideTracksWhenNotNeeded: true,
@@ -39,5 +39,5 @@ viewStyle = {
     //     </ScrollbarIosWrap>
     //   );
     // }
-    return (React.createElement(ScrollbarWrap, { ref: ref, ...optionsData, renderView: (Style, ...props) => (React.createElement("div", { ...props, style: { ...Style, ...viewStyle }, className: "view" })), renderTrackHorizontal: (Style, ...props) => (React.createElement("div", { ...props, style: { ...Style, ...horizontalStyle }, className: "track-horizontal" })), renderTrackVertical: (Style, ...props) => (React.createElement("div", { ...props, style: { ...Style, ...verticalStyle }, className: "track-vertical" })), className: "assessment-scrollbar", style: { ...style, height } }, children));
+    return (React.createElement(ScrollbarWrap, { ref: ref, ...optionsData, renderView: (Style, ...props) => (React.createElement("div", { ...props, style: { ...Style, ...viewStyle, ...extendsViewStyle }, className: "view" })), renderTrackHorizontal: (Style, ...props) => (React.createElement("div", { ...props, style: { ...Style, ...horizontalStyle, ...extendsHorizontalStyle }, className: "track-horizontal" })), renderTrackVertical: (Style, ...props) => (React.createElement("div", { ...props, style: { ...Style, ...verticalStyle, ...extendsVerticalStyle }, className: "track-vertical" })), className: "assessment-scrollbar", style: { ...style, height } }, children));
 });

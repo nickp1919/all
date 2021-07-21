@@ -6,8 +6,11 @@ export type ScrollbarWrapperProps = {
   horizontalStyle?: CSSProperties;
   verticalStyle?: CSSProperties;
   viewStyle?: CSSProperties;
-  options?: any; // TODO: any
+  options?: any;
   ref?: HTMLDivElement;
   style?: CSSProperties;
   HeightMax?: number;
+  extendsViewStyle?: CSSProperties;
+  extendsHorizontalStyle?: CSSProperties;
+  extendsVerticalStyle?: CSSProperties;
 };

@@ -9,4 +9,7 @@ export declare type ScrollbarWrapperProps = {
     ref?: HTMLDivElement;
     style?: CSSProperties;
     HeightMax?: number;
+    extendsViewStyle?: CSSProperties;
+    extendsHorizontalStyle?: CSSProperties;
+    extendsVerticalStyle?: CSSProperties;
 };
