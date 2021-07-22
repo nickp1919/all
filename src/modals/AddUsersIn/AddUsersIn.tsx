@@ -24,7 +24,12 @@ import {
   AddUsersInInnerDiv,
   AddUsersInTitleText,
 } from './styled';
-import { TAddUsersInProps, SelectedPersonType, IPersonInfoGlobalSearch } from './types';
+import {
+  TAddUsersInProps,
+  SelectedPersonType,
+  IPersonInfoGlobalSearch,
+  TDispatcher,
+} from './types';
 import { TEstimatedPerson, TGlobalSearchEstimators, TPersonSendType, TEstimator } from '@types';
 
 const { TYPE } = ASSESSMENT_360;
@@ -151,16 +156,14 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
 
   sendEstimatorsData = (
     data: TPersonSendType[],
-    action: string,
+    dispatcher: TDispatcher,
     textNotificator: string,
-    testId: string
+    namePayload: string
   ) => {
     const { store } = this.props;
+    const { action, payload } = dispatcher;
 
-    Dispatcher(store, action, {
-      id: testId,
-      estimators: data,
-    });
+    Dispatcher(store, action, { ...payload, [namePayload]: data });
 
     Notificator.info(textNotificator, { duration: null });
   };
@@ -318,7 +321,9 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
     removedUsers: TGlobalSearchEstimators[],
     role: string,
     onClose: Function,
-    testId: string
+    updateUsers: TDispatcher,
+    removerUsers: TDispatcher,
+    namePayload = 'estimators'
   ) => {
     const added: TPersonSendType[] = [];
     const removed: TPersonSendType[] = [];
@@ -340,21 +345,11 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
     }
 
     if (isArrayCount(removed)) {
-      this.sendEstimatorsData(
-        removed,
-        RemoveAssessment360Estimators.Pending,
-        'Идет удаление...',
-        testId
-      );
+      this.sendEstimatorsData(removed, removerUsers, 'Идет удаление...', namePayload);
     }
 
     if (isArrayCount(added)) {
-      this.sendEstimatorsData(
-        added,
-        AddAssessment360Estimators.Pending,
-        'Идет сохранение...',
-        testId
-      );
+      this.sendEstimatorsData(added, updateUsers, 'Идет сохранение...', namePayload);
     }
 
     this.setState({ disabled: true });
@@ -367,10 +362,12 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
       visible,
       onClose,
       removeChooseShow,
-      testId,
       roleInfo,
       searchStubDescription,
       windowLevel,
+      dispatcherRemove,
+      dispatcherUpdate,
+      namePayload,
     } = this.props;
     const {
       spinner,
@@ -394,7 +391,15 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
         actionBar={
           <AddUsersInSubmitButton
             onClick={() =>
-              this.handleSendUsers(usersChoose, removedUsers, roleType, onClose, testId)
+              this.handleSendUsers(
+                usersChoose,
+                removedUsers,
+                roleType,
+                onClose,
+                dispatcherUpdate,
+                dispatcherRemove,
+                namePayload
+              )
             }
             disabled={disabled}
           >
