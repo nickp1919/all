@@ -1,6 +1,6 @@
-import { Form } from "../../common";
-import { IBoxProps } from "../../types";
 import React from 'react';
+import Form from "../../common/Form/Form";
+import { IBoxProps } from "../../types";
 export declare const AddUsersInDiv: import("styled-components").StyledComponent<React.ForwardRefExoticComponent<Pick<any, string | number | symbol> & React.RefAttributes<HTMLDivElement>>, any, {}, never>;
 export declare const AddUsersInInnerDiv: import("styled-components").StyledComponent<React.ForwardRefExoticComponent<Pick<any, string | number | symbol> & React.RefAttributes<HTMLDivElement>>, any, {}, never>;
 export declare const AddUsersInPanelDiv: import("styled-components").StyledComponent<React.ForwardRefExoticComponent<Pick<any, string | number | symbol> & React.RefAttributes<HTMLDivElement>>, any, {}, never>;

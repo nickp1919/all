@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import css from '@styled-system/css';
 
@@ -9,12 +10,12 @@ import { BoxBlock, Button, TextBlock } from '@modules';
 
 import { AlignCenter, AJCenter, colors, BorderBox, FontType, Flex, Wrap } from '@globalStyled';
 
-import { Form, Input } from '@common';
+import Form from '@common/Form/Form';
+import Input from '@common/Form/Input';
 
 import PersonCard from './PersonCard';
 
 import { IBoxProps } from '@types';
-import React from 'react';
 
 export const AddUsersInDiv = styled(BoxBlock)`
   position: relative;

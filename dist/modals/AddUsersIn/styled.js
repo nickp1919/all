@@ -4,7 +4,8 @@ import { ReactComponent as XIcon } from "../../assets/x.svg";
 import { BIG_MODAL } from "../../constants";
 import { BoxBlock, Button, TextBlock } from "../../modules";
 import { AlignCenter, AJCenter, colors, BorderBox, FontType, Flex, Wrap } from "../../globalStyled";
-import { Form, Input } from "../../common";
+import Form from "../../common/Form/Form";
+import Input from "../../common/Form/Input";
 import PersonCard from './PersonCard';
 export const AddUsersInDiv = styled(BoxBlock) `
   position: relative;

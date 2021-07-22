@@ -3,7 +3,7 @@ import { TextArea } from './TextArea';
 import { CheckBox } from './CheckBox';
 import { CheckBoxImg } from './CheckBoxImg';
 // import { Dropdown } from './Dropdown';
-import { Input } from './Input';
+import Input from './Input';
 import { Radio } from './Radio';
 import { Label } from './Label';
 import { RadioText } from './RadioText';
