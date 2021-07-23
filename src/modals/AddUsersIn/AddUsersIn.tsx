@@ -306,8 +306,6 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
     // Данные для отправки на вверх
     const updateUsers: any = {};
 
-    console.log(usersChoose);
-
     // Подготавливаем данные для отправки на сервер для новых
     usersChoose.forEach((user) => {
       // если юзер приходит с платформы это значит что его нужно добавить
@@ -364,8 +362,6 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
       disabled,
       removedUsers,
     } = this.state;
-
-    console.log(usersChoose);
 
     const title = roleInfo?.title ? roleInfo?.title : titleText;
     const roleType = roleInfo?.roleType ? roleInfo?.roleType : '';
