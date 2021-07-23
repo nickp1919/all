@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import DropContent from './DropContent';
 import PersonSearch from './PersonSearch';
-import { SpinnerModule, ModalPageWrapper, Notificator } from "../../modules";
-import { cloneArray, Dispatcher, isArrayCount } from "../../utils";
+import { SpinnerModule, ModalPageWrapper } from "../../modules";
+import { cloneArray, isArrayCount } from "../../utils";
+//
+// import {
+//   AddAssessment360Estimators,
+//   RemoveAssessment360Estimators,
+// } from '@store/actions/assessment360.action';
 import { ASSESSMENT_360 } from "../../constants";
 import { FONT_VARIANTS } from "../../globalStyled";
 import { AddUsersInSubmitButton, SpinnerDiv, SearchWrapperDiv, FormBlock, AddUsersInDiv, AddUsersInInnerDiv, AddUsersInTitleText, } from './styled';
@@ -46,12 +51,19 @@ export function getUserID(user) {
 export class AddUsersIn extends Component {
     constructor(props) {
         super(props);
-        this.sendEstimatorsData = (data, dispatcher, textNotificator, namePayload) => {
-            const { store } = this.props;
-            const { action, payload } = dispatcher;
-            Dispatcher(store, action, { ...payload, [namePayload]: data });
-            Notificator.info(textNotificator, { duration: null });
-        };
+        // sendEstimatorsData = (
+        //   data: TPersonSendType[],
+        //   dispatcher: TDispatcher,
+        //   textNotificator: string,
+        //   namePayload: string
+        // ) => {
+        //   const { store } = this.props;
+        //   const { action, payload } = dispatcher;
+        //
+        //   Dispatcher(store, action, { ...payload, [namePayload]: data });
+        //
+        //   Notificator.info(textNotificator, { duration: null });
+        // };
         this.addChoosePerson = (person, usersChoose, findNowUsers, removedUsers) => {
             const _usersChoose = cloneArray(usersChoose);
             _usersChoose.push(person);
@@ -157,10 +169,12 @@ export class AddUsersIn extends Component {
                 });
             }
             if (isArrayCount(removed)) {
-                this.sendEstimatorsData(removed, removerUsers, 'Идет удаление...', namePayload);
+                this.props.setUpdateUsers(removed);
+                // this.sendEstimatorsData(removed, removerUsers, 'Идет удаление...', namePayload);
             }
             if (isArrayCount(added)) {
-                this.sendEstimatorsData(added, updateUsers, 'Идет сохранение...', namePayload);
+                this.props.setUpdateUsers(added);
+                // this.sendEstimatorsData(added, updateUsers, 'Идет сохранение...', namePayload);
             }
             this.setState({ disabled: true });
             onClose();
@@ -233,13 +247,13 @@ export class AddUsersIn extends Component {
         return valuesID;
     }
     render() {
-        const { visible, onClose, removeChooseShow, roleInfo, searchStubDescription, windowLevel, dispatcherRemove, dispatcherUpdate, namePayload, } = this.props;
+        const { visible, onClose, removeChooseShow, roleInfo, searchStubDescription, windowLevel, setUpdateUsers, setRemoverUsers, namePayload, } = this.props;
         const { spinner, allUsersAdd, initialValues, findNowUsers, checkedAll, usersChoose, disabled, removedUsers, } = this.state;
         const { title, roleType } = roleInfo;
         if (!visible) {
             return null;
         }
-        return (React.createElement(ModalPageWrapper, { actionBar: React.createElement(AddUsersInSubmitButton, { onClick: () => this.handleSendUsers(usersChoose, removedUsers, roleType, onClose, dispatcherUpdate, dispatcherRemove, namePayload), disabled: disabled }, "\u0434\u043E\u0431\u0430\u0432\u0438\u0442\u044C"), onClose: onClose, windowLevel: windowLevel },
+        return (React.createElement(ModalPageWrapper, { actionBar: React.createElement(AddUsersInSubmitButton, { onClick: () => this.handleSendUsers(usersChoose, removedUsers, roleType, onClose, setUpdateUsers, setRemoverUsers, namePayload), disabled: disabled }, "\u0434\u043E\u0431\u0430\u0432\u0438\u0442\u044C"), onClose: onClose, windowLevel: windowLevel },
             React.createElement(AddUsersInDiv, null,
                 React.createElement(AddUsersInInnerDiv, null,
                     React.createElement(AddUsersInTitleText, { forwardedAs: "h2", variant: h3Semibold }, title),

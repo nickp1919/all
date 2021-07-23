@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 import DropContent from './DropContent';
 import PersonSearch from './PersonSearch';
 
-import { SpinnerModule, ModalPageWrapper, Notificator } from '@modules';
+import { SpinnerModule, ModalPageWrapper } from '@modules';
 
-import { cloneArray, Dispatcher, isArrayCount } from '@utils';
-
-import {
-  AddAssessment360Estimators,
-  RemoveAssessment360Estimators,
-} from '@store/actions/assessment360.action';
+import { cloneArray, isArrayCount } from '@utils';
+//
+// import {
+//   AddAssessment360Estimators,
+//   RemoveAssessment360Estimators,
+// } from '@store/actions/assessment360.action';
 
 import { ASSESSMENT_360 } from '@constants';
 import { FONT_VARIANTS } from '@globalStyled';
@@ -154,19 +154,19 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
     return valuesID;
   }
 
-  sendEstimatorsData = (
-    data: TPersonSendType[],
-    dispatcher: TDispatcher,
-    textNotificator: string,
-    namePayload: string
-  ) => {
-    const { store } = this.props;
-    const { action, payload } = dispatcher;
-
-    Dispatcher(store, action, { ...payload, [namePayload]: data });
-
-    Notificator.info(textNotificator, { duration: null });
-  };
+  // sendEstimatorsData = (
+  //   data: TPersonSendType[],
+  //   dispatcher: TDispatcher,
+  //   textNotificator: string,
+  //   namePayload: string
+  // ) => {
+  //   const { store } = this.props;
+  //   const { action, payload } = dispatcher;
+  //
+  //   Dispatcher(store, action, { ...payload, [namePayload]: data });
+  //
+  //   Notificator.info(textNotificator, { duration: null });
+  // };
 
   addChoosePerson = (
     person: TGlobalSearchEstimators,
@@ -345,11 +345,14 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
     }
 
     if (isArrayCount(removed)) {
-      this.sendEstimatorsData(removed, removerUsers, 'Идет удаление...', namePayload);
+      this.props.setUpdateUsers(removed);
+
+      // this.sendEstimatorsData(removed, removerUsers, 'Идет удаление...', namePayload);
     }
 
     if (isArrayCount(added)) {
-      this.sendEstimatorsData(added, updateUsers, 'Идет сохранение...', namePayload);
+      this.props.setUpdateUsers(added);
+      // this.sendEstimatorsData(added, updateUsers, 'Идет сохранение...', namePayload);
     }
 
     this.setState({ disabled: true });
@@ -365,8 +368,8 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
       roleInfo,
       searchStubDescription,
       windowLevel,
-      dispatcherRemove,
-      dispatcherUpdate,
+      setUpdateUsers,
+      setRemoverUsers,
       namePayload,
     } = this.props;
     const {
@@ -396,8 +399,8 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
                 removedUsers,
                 roleType,
                 onClose,
-                dispatcherUpdate,
-                dispatcherRemove,
+                setUpdateUsers,
+                setRemoverUsers,
                 namePayload
               )
             }

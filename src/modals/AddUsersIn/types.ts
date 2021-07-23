@@ -23,8 +23,8 @@ export type TAddUsersInProps = {
   searchStubDescription?: ReactNode;
   windowLevel?: number;
   store: any;
-  dispatcherRemove: TDispatcher;
-  dispatcherUpdate: TDispatcher;
+  setUpdateUsers: any;
+  setRemoverUsers: any;
   namePayload?: string;
 };
 
