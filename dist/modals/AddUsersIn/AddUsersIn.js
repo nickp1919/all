@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
+import isEmpty from 'lodash.isempty';
 import DropContent from './DropContent';
 import PersonSearch from './PersonSearch';
 import { SpinnerModule, ModalPageWrapper } from "../../modules";
 import { cloneArray, isArrayCount } from "../../utils";
-//
-// import {
-//   AddAssessment360Estimators,
-//   RemoveAssessment360Estimators,
-// } from '@store/actions/assessment360.action';
 import { ASSESSMENT_360 } from "../../constants";
 import { FONT_VARIANTS } from "../../globalStyled";
 import { AddUsersInSubmitButton, SpinnerDiv, SearchWrapperDiv, FormBlock, AddUsersInDiv, AddUsersInInnerDiv, AddUsersInTitleText, } from './styled';
@@ -51,19 +47,6 @@ export function getUserID(user) {
 export class AddUsersIn extends Component {
     constructor(props) {
         super(props);
-        // sendEstimatorsData = (
-        //   data: TPersonSendType[],
-        //   dispatcher: TDispatcher,
-        //   textNotificator: string,
-        //   namePayload: string
-        // ) => {
-        //   const { store } = this.props;
-        //   const { action, payload } = dispatcher;
-        //
-        //   Dispatcher(store, action, { ...payload, [namePayload]: data });
-        //
-        //   Notificator.info(textNotificator, { duration: null });
-        // };
         this.addChoosePerson = (person, usersChoose, findNowUsers, removedUsers) => {
             const _usersChoose = cloneArray(usersChoose);
             _usersChoose.push(person);
@@ -151,9 +134,11 @@ export class AddUsersIn extends Component {
             }
             this.setState(stateData);
         };
-        this.handleSendUsers = (usersChoose, removedUsers, role, onClose, updateUsers, removerUsers, namePayload = 'estimators') => {
+        this.handleSendUsers = (usersChoose, removedUsers, role, onClose, setUpdateUsers) => {
             const added = [];
             const removed = [];
+            // Данные для отправки на вверх
+            const updateUsers = {};
             // Подготавливаем данные для отправки на сервер для новых
             usersChoose.forEach((user) => {
                 // если юзер приходит с платформы это значит что его нужно добавить
@@ -169,12 +154,14 @@ export class AddUsersIn extends Component {
                 });
             }
             if (isArrayCount(removed)) {
-                this.props.setUpdateUsers(removed);
-                // this.sendEstimatorsData(removed, removerUsers, 'Идет удаление...', namePayload);
+                updateUsers.removed = removed;
             }
             if (isArrayCount(added)) {
-                this.props.setUpdateUsers(added);
-                // this.sendEstimatorsData(added, updateUsers, 'Идет сохранение...', namePayload);
+                updateUsers.added = added;
+            }
+            // Вызываем коллбэк только если объект не пустой для передачи данных наружу
+            if (!isEmpty(updateUsers)) {
+                setUpdateUsers(updateUsers);
             }
             this.setState({ disabled: true });
             onClose();
@@ -247,13 +234,14 @@ export class AddUsersIn extends Component {
         return valuesID;
     }
     render() {
-        const { visible, onClose, removeChooseShow, roleInfo, searchStubDescription, windowLevel, setUpdateUsers, setRemoverUsers, namePayload, } = this.props;
+        const { visible, onClose, removeChooseShow, roleInfo, titleText = 'добавить по ФИО', searchStubDescription, windowLevel, setUpdateUsers, } = this.props;
         const { spinner, allUsersAdd, initialValues, findNowUsers, checkedAll, usersChoose, disabled, removedUsers, } = this.state;
-        const { title, roleType } = roleInfo;
+        const title = (roleInfo === null || roleInfo === void 0 ? void 0 : roleInfo.title) ? roleInfo === null || roleInfo === void 0 ? void 0 : roleInfo.title : titleText;
+        const roleType = (roleInfo === null || roleInfo === void 0 ? void 0 : roleInfo.roleType) ? roleInfo === null || roleInfo === void 0 ? void 0 : roleInfo.roleType : '';
         if (!visible) {
             return null;
         }
-        return (React.createElement(ModalPageWrapper, { actionBar: React.createElement(AddUsersInSubmitButton, { onClick: () => this.handleSendUsers(usersChoose, removedUsers, roleType, onClose, setUpdateUsers, setRemoverUsers, namePayload), disabled: disabled }, "\u0434\u043E\u0431\u0430\u0432\u0438\u0442\u044C"), onClose: onClose, windowLevel: windowLevel },
+        return (React.createElement(ModalPageWrapper, { actionBar: React.createElement(AddUsersInSubmitButton, { onClick: () => this.handleSendUsers(usersChoose, removedUsers, roleType, onClose, setUpdateUsers), disabled: disabled }, "\u0434\u043E\u0431\u0430\u0432\u0438\u0442\u044C"), onClose: onClose, windowLevel: windowLevel },
             React.createElement(AddUsersInDiv, null,
                 React.createElement(AddUsersInInnerDiv, null,
                     React.createElement(AddUsersInTitleText, { forwardedAs: "h2", variant: h3Semibold }, title),

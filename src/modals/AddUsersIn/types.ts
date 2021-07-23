@@ -18,14 +18,12 @@ export type TAddUsersInProps = {
   onClose: () => void;
   usersChoose: TEstimatedPerson[];
   removeChooseShow?: boolean;
-  roleInfo: TRoleInfo;
+  roleInfo?: TRoleInfo;
+  titleText?: string;
   filteredUsers: Dictionary<TFilteredEstimators>;
   searchStubDescription?: ReactNode;
   windowLevel?: number;
-  store: any;
   setUpdateUsers: any;
-  setRemoverUsers: any;
-  namePayload?: string;
 };
 
 export interface IPersonsContent extends Partial<TGlobalSearchEstimators> {

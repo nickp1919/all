@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import isEmpty from 'lodash.isempty';
 
 import DropContent from './DropContent';
 import PersonSearch from './PersonSearch';
@@ -6,11 +7,6 @@ import PersonSearch from './PersonSearch';
 import { SpinnerModule, ModalPageWrapper } from '@modules';
 
 import { cloneArray, isArrayCount } from '@utils';
-//
-// import {
-//   AddAssessment360Estimators,
-//   RemoveAssessment360Estimators,
-// } from '@store/actions/assessment360.action';
 
 import { ASSESSMENT_360 } from '@constants';
 import { FONT_VARIANTS } from '@globalStyled';
@@ -28,9 +24,9 @@ import {
   TAddUsersInProps,
   SelectedPersonType,
   IPersonInfoGlobalSearch,
-  TDispatcher,
 } from './types';
 import { TEstimatedPerson, TGlobalSearchEstimators, TPersonSendType, TEstimator } from '@types';
+
 
 const { TYPE } = ASSESSMENT_360;
 const { h3Semibold } = FONT_VARIANTS;
@@ -153,20 +149,6 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
 
     return valuesID;
   }
-
-  // sendEstimatorsData = (
-  //   data: TPersonSendType[],
-  //   dispatcher: TDispatcher,
-  //   textNotificator: string,
-  //   namePayload: string
-  // ) => {
-  //   const { store } = this.props;
-  //   const { action, payload } = dispatcher;
-  //
-  //   Dispatcher(store, action, { ...payload, [namePayload]: data });
-  //
-  //   Notificator.info(textNotificator, { duration: null });
-  // };
 
   addChoosePerson = (
     person: TGlobalSearchEstimators,
@@ -321,12 +303,13 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
     removedUsers: TGlobalSearchEstimators[],
     role: string,
     onClose: Function,
-    updateUsers: TDispatcher,
-    removerUsers: TDispatcher,
-    namePayload = 'estimators'
+    setUpdateUsers: Function
   ) => {
     const added: TPersonSendType[] = [];
     const removed: TPersonSendType[] = [];
+
+    // Данные для отправки на вверх
+    const updateUsers: any = {};
 
     // Подготавливаем данные для отправки на сервер для новых
     usersChoose.forEach((user) => {
@@ -345,14 +328,16 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
     }
 
     if (isArrayCount(removed)) {
-      this.props.setUpdateUsers(removed);
-
-      // this.sendEstimatorsData(removed, removerUsers, 'Идет удаление...', namePayload);
+      updateUsers.removed = removed;
     }
 
     if (isArrayCount(added)) {
-      this.props.setUpdateUsers(added);
-      // this.sendEstimatorsData(added, updateUsers, 'Идет сохранение...', namePayload);
+      updateUsers.added = added;
+    }
+
+    // Вызываем коллбэк только если объект не пустой для передачи данных наружу
+    if (!isEmpty(updateUsers)) {
+      setUpdateUsers(updateUsers);
     }
 
     this.setState({ disabled: true });
@@ -366,11 +351,10 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
       onClose,
       removeChooseShow,
       roleInfo,
+      titleText = 'добавить по ФИО',
       searchStubDescription,
       windowLevel,
       setUpdateUsers,
-      setRemoverUsers,
-      namePayload,
     } = this.props;
     const {
       spinner,
@@ -383,7 +367,8 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
       removedUsers,
     } = this.state;
 
-    const { title, roleType } = roleInfo;
+    const title = roleInfo?.title ? roleInfo?.title : titleText;
+    const roleType = roleInfo?.roleType ? roleInfo?.roleType : '';
 
     if (!visible) {
       return null;
@@ -394,15 +379,7 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
         actionBar={
           <AddUsersInSubmitButton
             onClick={() =>
-              this.handleSendUsers(
-                usersChoose,
-                removedUsers,
-                roleType,
-                onClose,
-                setUpdateUsers,
-                setRemoverUsers,
-                namePayload
-              )
+              this.handleSendUsers(usersChoose, removedUsers, roleType, onClose, setUpdateUsers)
             }
             disabled={disabled}
           >
