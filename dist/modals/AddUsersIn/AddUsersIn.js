@@ -141,16 +141,21 @@ export class AddUsersIn extends Component {
             const updateUsers = {};
             // Подготавливаем данные для отправки на сервер для новых
             usersChoose.forEach((user) => {
+                var _a;
+                // фото
+                const photo = ((_a = user.pbasicphoto) === null || _a === void 0 ? void 0 : _a.url) ? user.pbasicphoto.url : '';
                 // если юзер приходит с платформы это значит что его нужно добавить
                 // user.type на случай если мы нажали крестик, а потом опять добавили его
                 if (!(user === null || user === void 0 ? void 0 : user.type)) {
-                    added.push({ person: { personId: getUserID(user), ...user.pbasic }, role });
+                    added.push({ person: { personId: getUserID(user), photo, ...user.pbasic }, role });
                 }
             });
             // Подготавливаем данные для отправки на сервер для удаленных
             if (isArrayCount(removedUsers)) {
                 removedUsers.forEach((user) => {
-                    removed.push({ person: { personId: getUserID(user), ...user.pbasic }, role });
+                    // фото
+                    const photo = user.pbasicphoto.url ? user.pbasicphoto.url : '';
+                    removed.push({ person: { personId: getUserID(user), photo, ...user.pbasic }, role });
                 });
             }
             if (isArrayCount(removed)) {
@@ -242,7 +247,6 @@ export class AddUsersIn extends Component {
         if (!visible) {
             return null;
         }
-        console.log('allUsersAdd', allUsersAdd);
         return (React.createElement(ModalPageWrapper, { actionBar: React.createElement(AddUsersInSubmitButton, { onClick: () => this.handleSendUsers(usersChoose, removedUsers, roleType, onClose, setUpdateUsers), disabled: disabled }, "\u0434\u043E\u0431\u0430\u0432\u0438\u0442\u044C"), onClose: onClose, windowLevel: windowLevel },
             React.createElement(AddUsersInDiv, null,
                 React.createElement(AddUsersInInnerDiv, null,

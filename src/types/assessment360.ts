@@ -78,9 +78,7 @@ export type TEstimator = {
 };
 
 export type TPersonSendType = {
-  person: {
-    personId: string;
-  };
+  person: Partial<TEstimatedPerson>;
   role: string;
 };
 

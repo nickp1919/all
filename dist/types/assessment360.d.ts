@@ -69,9 +69,7 @@ export declare type TEstimator = {
     retryId: string;
 };
 export declare type TPersonSendType = {
-    person: {
-        personId: string;
-    };
+    person: Partial<TEstimatedPerson>;
     role: string;
 };
 export declare type TEstimatorsSendType = {
