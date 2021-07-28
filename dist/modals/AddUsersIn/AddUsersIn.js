@@ -242,7 +242,6 @@ export class AddUsersIn extends Component {
         if (!visible) {
             return null;
         }
-        console.log('allUsersAdd', allUsersAdd);
         return (React.createElement(ModalPageWrapper, { actionBar: React.createElement(AddUsersInSubmitButton, { onClick: () => this.handleSendUsers(usersChoose, removedUsers, roleType, onClose, setUpdateUsers), disabled: disabled }, "\u0434\u043E\u0431\u0430\u0432\u0438\u0442\u044C"), onClose: onClose, windowLevel: windowLevel },
             React.createElement(AddUsersInDiv, null,
                 React.createElement(AddUsersInInnerDiv, null,

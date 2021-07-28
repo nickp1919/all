@@ -17,7 +17,7 @@ const Stub = ({ title = 'раздел-невидимка', description = 'пок
     return (React.createElement(StubWrapDiv, null,
         Icon,
         React.createElement(StubContentDiv, null,
-            React.createElement(TitleBlock, { size: TITLE_SIZE.h2 }, title),
+            React.createElement(TitleBlock, { size: TITLE_SIZE.h3 }, title),
             React.createElement(StubTextBlock, { variant: descriptionFont }, description))));
 };
 export default Stub;
