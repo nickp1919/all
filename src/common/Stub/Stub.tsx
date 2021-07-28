@@ -1,23 +1,44 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-import { TextBlock } from '@modules';
+import { ReactComponent as GlassesIcon } from '@assets/glasses.svg';
+import { ReactComponent as MagicIcon } from '@assets/magic.svg';
 
-import { FONT_VARIANTS } from '@globalStyled';
+type TIcons = {
+  [key: string]: ReactNode;
+};
+
+const ICONS: TIcons = {
+  glasses: <GlassesIcon />,
+  magic: <MagicIcon />,
+};
+
+import { TitleBlock } from '@modules';
+
+import { isString } from '@utils';
+
+import { FONT_VARIANTS, TITLE_SIZE } from '@globalStyled';
 
 import { StubWrapDiv, StubContentDiv, StubTextBlock } from './styled';
 import { TStubProps } from './types';
 
-const Stub: React.FC<TStubProps> = ({ title, description, icon, extraBodyRegular = false }) => {
+const Stub: React.FC<TStubProps> = ({
+  title = 'раздел-невидимка',
+  description = 'пока что вам недоступен просмотр данного раздела платформы',
+  icon = 'glasses',
+  extraBodyRegular = false,
+}) => {
   const descriptionFont = extraBodyRegular
     ? FONT_VARIANTS.extraBodyRegular
     : FONT_VARIANTS.body1Regular;
 
+  const Icon = isString(icon) ? ICONS[icon] : icon;
+
   return (
     <StubWrapDiv>
-      {icon}
+      {Icon}
 
       <StubContentDiv>
-        {title && <TextBlock size={FONT_VARIANTS.h2Semibold}>{title}</TextBlock>}
+        <TitleBlock size={TITLE_SIZE.h3}>{title}</TitleBlock>
 
         <StubTextBlock variant={descriptionFont}>{description}</StubTextBlock>
       </StubContentDiv>
