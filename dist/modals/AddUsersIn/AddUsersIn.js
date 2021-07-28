@@ -139,6 +139,7 @@ export class AddUsersIn extends Component {
             const removed = [];
             // Данные для отправки на вверх
             const updateUsers = {};
+
             // Подготавливаем данные для отправки на сервер для новых
             usersChoose.forEach((user) => {
                 // если юзер приходит с платформы это значит что его нужно добавить
