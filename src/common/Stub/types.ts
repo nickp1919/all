@@ -5,6 +5,6 @@ type TIcon = 'glasses' | 'magic';
 export type TStubProps = {
   title: ReactNode | string;
   description: ReactNode | string;
-  icon: ReactNode | TIcon;
+  icon?: ReactNode | TIcon;
   extraBodyRegular?: boolean;
 };

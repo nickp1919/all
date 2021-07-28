@@ -24,14 +24,14 @@ import { TStubProps } from './types';
 const Stub: React.FC<TStubProps> = ({
   title = 'раздел-невидимка',
   description = 'пока что вам недоступен просмотр данного раздела платформы',
-  icon = 'glasses',
+  icon,
   extraBodyRegular = false,
 }) => {
   const descriptionFont = extraBodyRegular
     ? FONT_VARIANTS.extraBodyRegular
     : FONT_VARIANTS.body1Regular;
 
-  const Icon = isString(icon) ? ICONS[icon] : icon;
+  const Icon = icon ? (isString(icon) ? ICONS[icon] : icon) : null;
 
   return (
     <StubWrapDiv>
