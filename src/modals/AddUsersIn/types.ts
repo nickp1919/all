@@ -20,7 +20,7 @@ export type TAddUsersInProps = {
   removeChooseShow?: boolean;
   roleInfo?: TRoleInfo;
   titleText?: string;
-  filteredUsers: Dictionary<TFilteredEstimators>;
+  filteredUsers?: Dictionary<TFilteredEstimators>;
   searchStubDescription?: ReactNode;
   windowLevel?: number;
   setUpdateUsers: any;
