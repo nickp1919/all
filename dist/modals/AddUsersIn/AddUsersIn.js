@@ -139,19 +139,18 @@ export class AddUsersIn extends Component {
             const removed = [];
             // Данные для отправки на вверх
             const updateUsers = {};
-            console.log(usersChoose);
             // Подготавливаем данные для отправки на сервер для новых
             usersChoose.forEach((user) => {
                 // если юзер приходит с платформы это значит что его нужно добавить
                 // user.type на случай если мы нажали крестик, а потом опять добавили его
                 if (!(user === null || user === void 0 ? void 0 : user.type)) {
-                    added.push({ person: { personId: getUserID(user) }, role, ...user.pbasic });
+                    added.push({ person: { personId: getUserID(user), ...user.pbasic }, role });
                 }
             });
             // Подготавливаем данные для отправки на сервер для удаленных
             if (isArrayCount(removedUsers)) {
                 removedUsers.forEach((user) => {
-                    removed.push({ person: { personId: getUserID(user) }, role, ...user.pbasic });
+                    removed.push({ person: { personId: getUserID(user), ...user.pbasic }, role });
                 });
             }
             if (isArrayCount(removed)) {
@@ -238,7 +237,6 @@ export class AddUsersIn extends Component {
     render() {
         const { visible, onClose, removeChooseShow, roleInfo, titleText = 'добавить по ФИО', searchStubDescription, windowLevel, setUpdateUsers, } = this.props;
         const { spinner, allUsersAdd, initialValues, findNowUsers, checkedAll, usersChoose, disabled, removedUsers, } = this.state;
-        console.log(usersChoose);
         const title = (roleInfo === null || roleInfo === void 0 ? void 0 : roleInfo.title) ? roleInfo === null || roleInfo === void 0 ? void 0 : roleInfo.title : titleText;
         const roleType = (roleInfo === null || roleInfo === void 0 ? void 0 : roleInfo.roleType) ? roleInfo === null || roleInfo === void 0 ? void 0 : roleInfo.roleType : '';
         if (!visible) {

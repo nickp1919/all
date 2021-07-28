@@ -48,6 +48,10 @@ function renderCardPerson(usersChoose, removeChoosePerson) {
                 const { participant } = user;
                 person = participant;
             }
+            else if (user === null || user === void 0 ? void 0 : user.person) {
+                const { person: choosePerson } = user;
+                person = choosePerson;
+            }
             else {
                 const { pbasic, personUuid } = user;
                 person = {

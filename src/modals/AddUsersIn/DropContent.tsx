@@ -70,9 +70,12 @@ function renderCardPerson(usersChoose: any, removeChoosePerson: Function) {
         const { participant } = user;
 
         person = participant;
+      } else if (user?.person) {
+        const { person: choosePerson } = user;
+
+        person = choosePerson;
       } else {
         const { pbasic, personUuid } = user;
-
         person = {
           personId: personUuid,
           firstName: pbasic && pbasic.firstName,

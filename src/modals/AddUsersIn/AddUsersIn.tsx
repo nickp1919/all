@@ -311,14 +311,14 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
       // если юзер приходит с платформы это значит что его нужно добавить
       // user.type на случай если мы нажали крестик, а потом опять добавили его
       if (!user?.type) {
-        added.push({ person: { personId: getUserID(user) }, role, ...user.pbasic });
+        added.push({ person: { personId: getUserID(user), ...user.pbasic }, role });
       }
     });
 
     // Подготавливаем данные для отправки на сервер для удаленных
     if (isArrayCount(removedUsers)) {
       removedUsers.forEach((user: TGlobalSearchEstimators) => {
-        removed.push({ person: { personId: getUserID(user) }, role, ...user.pbasic });
+        removed.push({ person: { personId: getUserID(user), ...user.pbasic }, role });
       });
     }
 
