@@ -97,7 +97,8 @@ export type TFilteredEstimators = {
 
 export type TGlobalSearchEstimators = IPersonInfoGlobalSearch &
   Partial<TEstimatedPerson> &
-  Partial<TParticipant>;
+  Partial<TParticipant> &
+  any; // TODO any
 
 export type TParticipant = {
   participant: TEstimatedPerson;

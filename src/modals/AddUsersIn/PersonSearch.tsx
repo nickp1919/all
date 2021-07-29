@@ -58,12 +58,11 @@ const PersonSearch: React.FC<PersonSearchProps> = ({
           // и по полю isFixed меняем input на серую картинку
           allUsersAddData.forEach((user) => {
             if (findUser(user.person, person)) {
+              // указываем что мы его добавляли ранее
+              person.isChecked = true;
+
               if (user?.role === role) {
                 // если мы зашли в группу в которой чел и находится
-
-                // указываем что мы его добавляли ранее
-                person.isChecked = true;
-
                 // прописываем ему тип и в DropContent проверяем на TYPE.FIXED
                 person.type = user?.type;
               } else {

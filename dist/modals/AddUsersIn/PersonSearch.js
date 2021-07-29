@@ -26,10 +26,10 @@ const PersonSearch = ({ allUsersAdd, setSpinner, setUserList, role, }) => {
                     // и по полю isFixed меняем input на серую картинку
                     allUsersAddData.forEach((user) => {
                         if (findUser(user.person, person)) {
+                            // указываем что мы его добавляли ранее
+                            person.isChecked = true;
                             if ((user === null || user === void 0 ? void 0 : user.role) === role) {
                                 // если мы зашли в группу в которой чел и находится
-                                // указываем что мы его добавляли ранее
-                                person.isChecked = true;
                                 // прописываем ему тип и в DropContent проверяем на TYPE.FIXED
                                 person.type = user === null || user === void 0 ? void 0 : user.type;
                             }
@@ -44,6 +44,7 @@ const PersonSearch = ({ allUsersAdd, setSpinner, setUserList, role, }) => {
             }
             if (isArrayCount(users)) {
                 data.persons = users;
+                console.log('personsearch', users);
             }
             setSpinner(false);
             setUserList((data === null || data === void 0 ? void 0 : data.persons) || []);

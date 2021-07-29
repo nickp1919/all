@@ -76,7 +76,7 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
       removedUsers: [], // массив удаленных пользователей для отправки на бэк
       initialValues: {},
       checkedAll: false, // значение поля с checkbox "Выбрать всех"
-      allUsersAdd: [], // формируем общий список всех людей которые були добавлены на оценку
+      allUsersAdd: [], // формируем общий список всех людей которые были добавлены на оценку
     };
   }
 
@@ -314,7 +314,8 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
       // если юзер приходит с платформы это значит что его нужно добавить
       // user.type на случай если мы нажали крестик, а потом опять добавили его
       if (!user?.type) {
-        added.push({ person: { personId: getUserID(user), photo, ...user.pbasic }, role });
+        const userInfo = user?.pbasic ? user?.pbasic : user?.person;
+        added.push({ person: { personId: getUserID(user), photo, ...user, ...userInfo }, role });
       }
     });
 
@@ -324,7 +325,7 @@ export class AddUsersIn extends Component<TAddUsersInProps, any> {
         // фото
         const photo = user.pbasicphoto.url ? user.pbasicphoto.url : '';
 
-        removed.push({ person: { personId: getUserID(user), photo, ...user.pbasic }, role });
+        removed.push({ person: { personId: getUserID(user), photo, ...user }, role });
       });
     }
 

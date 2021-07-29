@@ -35,9 +35,13 @@ export function findUser(user, person) {
     }
 }
 export function getUserID(user) {
+    var _a;
     let id = '';
     if (user === null || user === void 0 ? void 0 : user.personId) {
         id = user.personId;
+    }
+    if ((_a = user === null || user === void 0 ? void 0 : user.person) === null || _a === void 0 ? void 0 : _a.personId) {
+        id = user.person.personId;
     }
     if (user === null || user === void 0 ? void 0 : user.personUuid) {
         id = user.personUuid;
@@ -147,7 +151,8 @@ export class AddUsersIn extends Component {
                 // если юзер приходит с платформы это значит что его нужно добавить
                 // user.type на случай если мы нажали крестик, а потом опять добавили его
                 if (!(user === null || user === void 0 ? void 0 : user.type)) {
-                    added.push({ person: { personId: getUserID(user), photo, ...user.pbasic }, role });
+                    const userInfo = (user === null || user === void 0 ? void 0 : user.pbasic) ? user === null || user === void 0 ? void 0 : user.pbasic : user === null || user === void 0 ? void 0 : user.person;
+                    added.push({ person: { personId: getUserID(user), photo, ...user, ...userInfo }, role });
                 }
             });
             // Подготавливаем данные для отправки на сервер для удаленных
@@ -155,7 +160,7 @@ export class AddUsersIn extends Component {
                 removedUsers.forEach((user) => {
                     // фото
                     const photo = user.pbasicphoto.url ? user.pbasicphoto.url : '';
-                    removed.push({ person: { personId: getUserID(user), photo, ...user.pbasic }, role });
+                    removed.push({ person: { personId: getUserID(user), photo, ...user }, role });
                 });
             }
             if (isArrayCount(removed)) {
@@ -181,7 +186,7 @@ export class AddUsersIn extends Component {
             removedUsers: [],
             initialValues: {},
             checkedAll: false,
-            allUsersAdd: [], // формируем общий список всех людей которые були добавлены на оценку
+            allUsersAdd: [], // формируем общий список всех людей которые были добавлены на оценку
         };
     }
     componentDidUpdate(prevProps, prevState) {

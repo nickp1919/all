@@ -84,7 +84,7 @@ export declare type TFilteredEstimators = {
     values: TEstimator[];
     isAddNewUserAvailable: boolean;
 };
-export declare type TGlobalSearchEstimators = IPersonInfoGlobalSearch & Partial<TEstimatedPerson> & Partial<TParticipant>;
+export declare type TGlobalSearchEstimators = IPersonInfoGlobalSearch & Partial<TEstimatedPerson> & Partial<TParticipant> & any;
 export declare type TParticipant = {
     participant: TEstimatedPerson;
 };
