@@ -58,6 +58,8 @@ export declare const colors: {
     overlay40: string;
     simpleBlack: string;
     simpleWhite: string;
+    snackbarDefaultFill: string;
+    snackbarStroke: string;
     systemError: string;
     systemSuccess: string;
     systemWarning: string;

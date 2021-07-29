@@ -9,12 +9,13 @@ import { ReactComponent as CloseSvg } from './icon/close.svg';
 
 import ModalBarBlock from './ModalBarBlock';
 import ModalButtonBlock from './ModalButtonBlock';
+import ModalBreadcrumbs from './ModalBreadcrumbs';
 
-import { ModalPageWrapperHeaderDiv, ModalWrapperActionBarDiv } from './styles';
+import { ModalPageWrapperHeader, ModalWrapperActionBarDiv } from './styles';
 import { ModalWrapperProps } from './types';
 
 export const ModalPageWrapper = React.forwardRef<HTMLDivElement, ModalWrapperProps>(
-  ({ actionBar, onClose, children, windowLevel = 1, size = 'm' }, ref) => {
+  ({ actionBar, onClose, children, windowLevel = 1, size = 'm', breadcrumbs = [] }, ref) => {
     useEffect(() => {
       const body: HTMLElement = document.body;
 
@@ -36,13 +37,12 @@ export const ModalPageWrapper = React.forwardRef<HTMLDivElement, ModalWrapperPro
     ) : null;
 
     const _header = size !== 's' && (
-      <ModalPageWrapperHeaderDiv>
-        <div />
-
+      <ModalPageWrapperHeader>
+        <ModalBreadcrumbs breadcrumbs={breadcrumbs} />
         <ModalButtonBlock $containsOnlyIcon onClick={() => onClose()}>
           <CloseSvg />
         </ModalButtonBlock>
-      </ModalPageWrapperHeaderDiv>
+      </ModalPageWrapperHeader>
     );
 
     return (

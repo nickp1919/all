@@ -44,7 +44,6 @@ const PersonSearch = ({ allUsersAdd, setSpinner, setUserList, role, }) => {
             }
             if (isArrayCount(users)) {
                 data.persons = users;
-                console.log('personsearch', users);
             }
             setSpinner(false);
             setUserList((data === null || data === void 0 ? void 0 : data.persons) || []);

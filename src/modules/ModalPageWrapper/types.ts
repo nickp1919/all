@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import { Size } from '@pulse/ui/components/Modal/types';
+import { TBreadcrumb } from './ModalBreadcrumbs/types';
 
 export type ModalWrapperProps = {
   actionBar?: ReactNode;
@@ -9,4 +10,5 @@ export type ModalWrapperProps = {
   windowLevel?: number;
   size?: Size;
   header?: ReactNode;
+  breadcrumbs?: TBreadcrumb[];
 };

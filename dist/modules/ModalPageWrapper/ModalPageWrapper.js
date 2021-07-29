@@ -5,8 +5,9 @@ import { Modal } from '@pulse/ui/components/Modal';
 import { ReactComponent as CloseSvg } from './icon/close.svg';
 import ModalBarBlock from './ModalBarBlock';
 import ModalButtonBlock from './ModalButtonBlock';
-import { ModalPageWrapperHeaderDiv, ModalWrapperActionBarDiv } from './styles';
-export const ModalPageWrapper = React.forwardRef(({ actionBar, onClose, children, windowLevel = 1, size = 'm' }, ref) => {
+import ModalBreadcrumbs from './ModalBreadcrumbs';
+import { ModalPageWrapperHeader, ModalWrapperActionBarDiv } from './styles';
+export const ModalPageWrapper = React.forwardRef(({ actionBar, onClose, children, windowLevel = 1, size = 'm', breadcrumbs = [] }, ref) => {
     useEffect(() => {
         const body = document.body;
         if (body && windowLevel === 1) {
@@ -20,8 +21,8 @@ export const ModalPageWrapper = React.forwardRef(({ actionBar, onClose, children
     }, [windowLevel]);
     const _actionBar = actionBar ? (React.createElement(ModalBarBlock, { className: "assessment-client-modal-page-action" },
         React.createElement(ModalWrapperActionBarDiv, null, actionBar))) : null;
-    const _header = size !== 's' && (React.createElement(ModalPageWrapperHeaderDiv, null,
-        React.createElement("div", null),
+    const _header = size !== 's' && (React.createElement(ModalPageWrapperHeader, null,
+        React.createElement(ModalBreadcrumbs, { breadcrumbs: breadcrumbs }),
         React.createElement(ModalButtonBlock, { "$containsOnlyIcon": true, onClick: () => onClose() },
             React.createElement(CloseSvg, null))));
     return (React.createElement(Modal, { "$size": size, "$header": _header, "$actionBar": _actionBar, "$onClose": onClose, className: classNames('assessment-client-modal assessment-client-modal-page'), ref: ref }, children));

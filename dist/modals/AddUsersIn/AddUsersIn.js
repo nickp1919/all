@@ -35,13 +35,9 @@ export function findUser(user, person) {
     }
 }
 export function getUserID(user) {
-    var _a;
     let id = '';
     if (user === null || user === void 0 ? void 0 : user.personId) {
         id = user.personId;
-    }
-    if ((_a = user === null || user === void 0 ? void 0 : user.person) === null || _a === void 0 ? void 0 : _a.personId) {
-        id = user.person.personId;
     }
     if (user === null || user === void 0 ? void 0 : user.personUuid) {
         id = user.personUuid;

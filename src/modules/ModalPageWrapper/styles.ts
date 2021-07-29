@@ -1,14 +1,18 @@
 import styled from 'styled-components';
 import css from '@styled-system/css';
 
+import { Header } from '@pulse/ui/components/Modal';
+
 import { BoxBlock } from '@modules';
-import { JSBetween, JSEnd } from '@globalStyled';
+import { JSBetween, JSEnd, AlignCenter } from '@globalStyled';
 
-export const ModalPageWrapperHeaderDiv = styled(BoxBlock)`
+export const ModalPageWrapperHeader = styled(Header)`
   ${JSBetween}
-
+  ${AlignCenter}
   ${css({
-    p: '5px',
+    pl: 4,
+    pr: 2,
+    py: '7px',
   })}
 `;
 
